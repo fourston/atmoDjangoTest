@@ -1,0 +1,352 @@
+.menu-active-hide .need-to-hide {
+  display: none; }
+.menu-active-hide .content__border {
+  overflow: visible !important; }
+
+.menu-popup {
+  position: absolute;
+  left: 0;
+  top: -20px;
+  right: 0;
+  z-index: 4;
+  overflow-y: auto;
+  transform: translateX(-100%); }
+  .navigation-fixed .menu-popup {
+    top: -15px; }
+  .menu-active .menu-popup {
+    transition: transform 0.3s ease 0.1s;
+    transform: translateX(0); }
+  .menu-in .menu-popup {
+    transition: none;
+    transform: inherit; }
+  .menu-out .menu-popup {
+    transition: transform 0.2s ease 0.75s;
+    transform: translateX(100%); }
+  .nav-up .navigation-fixed .menu-popup {
+    display: none !important; }
+  .menu-popup .popup__close {
+    position: absolute;
+    right: 20px;
+    top: 20px; }
+    .menu-active .menu-popup .popup__close {
+      position: fixed;
+      transition-delay: 0.5s; }
+    .menu-out .menu-popup .popup__close {
+      transition-delay: 0.1s; }
+    .navigation-fixed .menu-popup .popup__close {
+      top: 15px; }
+  .menu-popup__content {
+    position: relative;
+    background: #f6f5f1; }
+    .menu-popup__content__back {
+      position: absolute;
+      height: 106px;
+      left: 0;
+      top: -20px;
+      right: 0;
+      z-index: 4;
+      background: #ffffff; }
+      .menu-active .menu-popup__content__back {
+        position: fixed; }
+    .menu-popup__content__blocks {
+      padding-bottom: 50px; }
+      .menu-popup__content__blocks .content__wrapper {
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: opacity 0.4s ease-in 0.5s, transform 0.4s ease 0.5s; }
+        .menu-active .menu-popup__content__blocks .content__wrapper {
+          opacity: 1;
+          transform: translateY(0); }
+        .menu-out .menu-popup__content__blocks .content__wrapper {
+          transition-delay: 0.1s;
+          opacity: 0;
+          transform: translateY(10px); }
+    .menu-popup__content__title {
+      font-size: 16px;
+      line-height: 28px; }
+    .menu-popup__content__about {
+      padding: 106px 0 37px;
+      background: #ffffff; }
+    .menu-popup__content__fitness {
+      padding: 31px 0 35px; }
+      .menu-popup__content__fitness-pos {
+        padding: 40px; }
+  .menu-popup__list {
+    margin: 0;
+    padding: 10px 0 0;
+    list-style-type: none; }
+    .menu-popup__list-right {
+      padding-top: 0; }
+    .menu-popup__list__item {
+      margin: 18px 0 0;
+      padding: 0;
+      font-size: 14px;
+      line-height: 17px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #c2c2c2; }
+  .menu-popup__socials {
+    font-size: 0;
+    line-height: 0; }
+    .menu-popup__socials__icon {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 10px; }
+      .menu-popup__socials__icon path,
+      .menu-popup__socials__icon circle,
+      .menu-popup__socials__icon polygon {
+        fill: #A5A5A5; }
+
+@media screen and (min-width: 480px) {
+  .menu-popup .content__wrapper {
+    padding: 0 20px; }
+  .menu-popup__content {
+    min-height: 536px;
+    margin-left: -20px;
+    padding-left: 20px; }
+    .menu-popup__content::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      background: #f6f5f1; }
+    .menu-popup__content::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 50%;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 2;
+      background: #ffffff;
+      transform: translateX(-100%); }
+      .menu-active .menu-popup__content::after {
+        transition: transform 0.3s ease 0.3s;
+        transform: translateX(0); }
+      .menu-in .menu-popup__content::after {
+        transition: none;
+        transform: inherit; }
+      .menu-out .menu-popup__content::after {
+        transition: width 0.2s ease 0.5s;
+        width: 100%; }
+    .menu-popup__content__back {
+      margin-left: -20px;
+      background: #f6f5f1; }
+      .menu-popup__content__back::before {
+        content: "";
+        display: block;
+        width: 50%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 3;
+        background: #ffffff;
+        transform: translateX(-100%); }
+        .menu-active .menu-popup__content__back::before {
+          transition: transform 0.3s ease 0.3s;
+          transform: translateX(0); }
+        .menu-in .menu-popup__content__back::before {
+          transition: none;
+          transform: inherit; }
+        .menu-out .menu-popup__content__back::before {
+          transition: width 0.2s ease 0.5s;
+          width: 100%; }
+    .menu-popup__content__blocks-pos {
+      margin: 0 -20px; }
+    .menu-popup__content__blocks {
+      width: 100%;
+      height: 340px;
+      position: absolute;
+      top: 50%;
+      z-index: 3;
+      margin-top: -180px;
+      padding: 0 20px; }
+    .menu-popup__content__about {
+      width: 50%;
+      display: inline-block;
+      vertical-align: top;
+      padding: 0;
+      background: none; }
+    .menu-popup__content__fitness {
+      width: 50%;
+      display: inline-block;
+      vertical-align: top;
+      padding: 0 0 0 10px;
+      background: none; }
+  .menu-popup__list {
+    padding-top: 17px; }
+    .menu-popup__list-right {
+      padding-top: 0; }
+  .menu-popup__socials {
+    width: 50%;
+    margin-top: -23px; } }
+@media screen and (min-width: 760px) {
+  .menu-popup {
+    top: -30px; }
+    .menu-popup .popup__close {
+      top: 40px;
+      right: 40px; }
+    .menu-popup .content__wrapper {
+      padding: 0 10px; }
+    .menu-popup__content {
+      min-height: 590px; }
+      .menu-popup__content::after {
+        width: 41.67%; }
+      .menu-popup__content__back {
+        height: 140px; }
+        .menu-popup__content__back::before {
+          width: 41.67%; }
+      .menu-popup__content__blocks {
+        height: 371px;
+        padding: 0 50px; }
+      .menu-popup__content__fitness {
+        padding: 0; }
+    .menu-popup__list {
+      padding-top: 16px; }
+      .menu-popup__list-right {
+        padding-top: 0; }
+      .menu-popup__list__item {
+        font-size: 16px;
+        margin-top: 22px; }
+    .menu-popup__socials {
+      width: 40%; } }
+@media screen and (min-width: 1000px) {
+  .menu-popup .content__wrapper {
+    padding: 0 20px; }
+  .menu-popup__content {
+    min-height: 600px; }
+    .menu-popup__content::after {
+      width: 35%; }
+    .menu-popup__content__back {
+      display: none; }
+      .menu-popup__content__back::before {
+        width: 35%; }
+    .menu-popup__content__blocks {
+      padding: 0 40px;
+      height: 280px;
+      margin-top: -135px; }
+    .menu-popup__content__about {
+      width: 41.67%; }
+    .menu-popup__content__fitness .content__wrapper {
+      margin: 0 -10px; }
+    .menu-popup__content__fitness .menu-popup__content__title {
+      padding-left: 10px; }
+  .menu-popup__list-left, .menu-popup__list-right {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 10px;
+    padding-right: 10px; }
+  .menu-popup__list-right {
+    padding-top: 16px;
+    padding-left: 20px; }
+  .menu-popup__socials {
+    display: none; } }
+@media screen and (min-width: 1320px) {
+  .menu-active .animated-screen {
+    overflow: visible; }
+  .menu-active .content__border-wrapper {
+    overflow: hidden;
+    margin-bottom: -40px; }
+
+  .menu-popup {
+    left: -20px;
+    right: -20px;
+    top: -50px; }
+    .menu-active .menu-popup {
+      overflow: hidden; }
+    .menu-popup .popup__close {
+      right: 60px;
+      top: 60px; }
+    .menu-popup__content {
+      margin-left: 0;
+      margin-right: 0; }
+      .menu-popup__content::after {
+        width: 33.33%; }
+      .menu-popup__content__back {
+        height: 160px;
+        margin-left: 0;
+        margin-right: 0; }
+        .menu-popup__content__back::before {
+          width: 33.33%; }
+      .menu-popup__content__blocks {
+        padding: 0 30px;
+        height: 304px;
+        margin-top: -160px; }
+      .menu-popup__content__about {
+        width: 41%;
+        padding: 0 10px; }
+      .menu-popup__content__fitness {
+        width: 49%;
+        padding: 0 0 0 5px; }
+    .menu-popup__list {
+      padding-top: 11px; }
+      .menu-popup__list__item {
+        font-size: 18px;
+        margin-top: 27px; } }
+@media screen and (min-width: 1600px) {
+  .menu-active .content__border-wrapper {
+    margin-bottom: -60px; }
+
+  .menu-popup {
+    top: -70px;
+    left: -30px;
+    right: -30px; }
+    .menu-popup .popup__close {
+      top: 80px;
+      right: 60px; }
+    .menu-popup .content__wrapper {
+      padding: 0 15px; }
+    .menu-popup__content {
+      min-height: 860px;
+      padding: 0; }
+      .menu-popup__content::after {
+        width: 25%; }
+      .menu-popup__content__back {
+        height: 180px; }
+        .menu-popup__content__back::before {
+          width: 25%; }
+      .menu-popup__content__blocks-pos {
+        margin: 0 -15px; }
+      .menu-popup__content__blocks {
+        height: 360px;
+        margin-top: -240px;
+        padding: 0 30px; }
+      .menu-popup__content__about {
+        width: 33.33%;
+        padding: 0 30px; }
+      .menu-popup__content__fitness {
+        padding: 0 30px; }
+        .menu-popup__content__fitness .content__wrapper {
+          margin: 0 -15px;
+          padding: 0 15px 0 0; }
+        .menu-popup__content__fitness .menu-popup__content__title {
+          padding-left: 15px; }
+    .menu-popup__list {
+      padding-top: 39px; }
+      .menu-popup__list-left, .menu-popup__list-right {
+        padding-left: 15px;
+        padding-right: 15px; }
+      .menu-popup__list__item {
+        font-size: 20px;
+        margin-top: 31px; } }
+@media screen and (min-width: 1900px) {
+  .menu-popup .popup__close {
+    right: 95px; }
+  .menu-popup__content::after {
+    width: 26%; }
+  .menu-popup__content__back::before {
+    width: 26%; }
+  .menu-popup__content__blocks {
+    padding: 0 65px; }
+  .menu-popup__content__about {
+    width: 35%; }
+  .menu-popup__content__fitness {
+    width: 52%;
+    margin-left: -25px; } }

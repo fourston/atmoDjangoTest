@@ -1,0 +1,1017 @@
+.promo-fitness {
+  padding: 0 0 92px; }
+  .promo-fitness__navigation {
+    display: none; }
+  .promo-fitness__person-pos {
+    min-height: 530px;
+    max-height: 568px;
+    position: relative; }
+  .promo-fitness__person {
+    height: 387px;
+    position: absolute;
+    left: -20px;
+    right: -68px;
+    top: 50%;
+    margin-top: -194px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+    .promo-fitness__person img {
+      display: none; }
+    .gym .promo-fitness__person {
+      background-image: url("../images/fitness/gym/main.png"); }
+    .yoga .promo-fitness__person {
+      background-image: url("../images/fitness/yoga/main.png"); }
+    .group .promo-fitness__person {
+      background-image: url("../images/fitness/group/main.png"); }
+    .cycle .promo-fitness__person {
+      background-image: url("../images/fitness/cycle/main.png"); }
+    .swimming .promo-fitness__person {
+      background-image: url("../images/fitness/swimming/main.png"); }
+    .nutrition .promo-fitness__person {
+      background-image: url("../images/fitness/nutrition/main.png"); }
+    .children .promo-fitness__person {
+      background-image: url("../images/fitness/children/main.png"); }
+    .fighting .promo-fitness__person {
+      background-image: url("../images/fitness/fighting/main.png"); }
+  .promo-fitness__text {
+    margin-top: -52px; }
+    .promo-fitness__text .head01 {
+      padding-bottom: 14px; }
+  .promo-fitness__button {
+    margin-top: 32px; }
+
+.fitness-trainer {
+  padding-bottom: 82px; }
+  .fitness-trainer__img {
+    min-height: 340px;
+    margin: 0 -20px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; }
+    .fitness-trainer__img__src {
+      display: none; }
+    .gym .fitness-trainer__img {
+      background-image: url("../images/fitness/gym/back.jpg"); }
+    .yoga .fitness-trainer__img {
+      background-image: url("../images/fitness/yoga/back.jpg"); }
+    .group .fitness-trainer__img {
+      background-image: url("../images/fitness/group/back.jpg"); }
+    .cycle .fitness-trainer__img {
+      background-image: url("../images/fitness/cycle/back.jpg"); }
+    .swimming .fitness-trainer__img {
+      background-image: url("../images/fitness/swimming/back.jpg"); }
+    .nutrition .fitness-trainer__img {
+      background-image: url("../images/fitness/nutrition/back.jpg"); }
+    .children .fitness-trainer__img {
+      background-image: url("../images/fitness/children/back.jpg"); }
+    .fighting .fitness-trainer__img {
+      background-image: url("../images/fitness/fighting/back.jpg"); }
+  .fitness-trainer__logo {
+    min-height: 265px;
+    margin: 0 -20px;
+    position: relative;
+    background: #1b1f2c; }
+    .fitness-trainer__logo::after {
+      content: "";
+      display: block;
+      height: 90px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 2;
+      margin-top: -43px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover; }
+      .gym .fitness-trainer__logo::after {
+        width: 90px;
+        margin-left: -45px;
+        background-image: url("../images/fitness/icons/icon-gym-01.png"); }
+      .yoga .fitness-trainer__logo::after {
+        width: 85px;
+        margin-left: -42px;
+        background-image: url("../images/fitness/icons/icon-yoga-01.png"); }
+      .group .fitness-trainer__logo::after {
+        width: 132px;
+        margin-left: -66px;
+        background-image: url("../images/fitness/icons/icon-group-01.png"); }
+      .cycle .fitness-trainer__logo::after {
+        width: 90px;
+        margin-left: -45px;
+        background-image: url("../images/fitness/icons/icon-cycle-01.png"); }
+      .swimming .fitness-trainer__logo::after {
+        width: 90px;
+        margin-left: -45px;
+        background-image: url("../images/fitness/icons/icon-swimming-01.png"); }
+      .nutrition .fitness-trainer__logo::after {
+        width: 85px;
+        margin-left: -42px;
+        background-image: url("../images/fitness/icons/icon-nutr-01.png"); }
+      .children .fitness-trainer__logo::after {
+        width: 90px;
+        margin-left: -45px;
+        background-image: url("../images/fitness/icons/icon-children-01.png"); }
+      .fighting .fitness-trainer__logo::after {
+        width: 90px;
+        margin-left: -45px;
+        background-image: url("../images/fitness/icons/icon-fighting-01.png"); }
+  .fitness-trainer__photo {
+    min-height: 265px;
+    margin: 0 -20px;
+    font-size: 0;
+    line-height: 0; }
+    .fitness-trainer__photo__src {
+      width: 100%;
+      height: auto; }
+  .fitness-trainer__info {
+    margin: 30px 0 0; }
+    .fitness-trainer__info .head03 {
+      padding-bottom: 15px; }
+    .fitness-trainer__info__name .head02 {
+      padding-bottom: 0; }
+    .fitness-trainer__info__photo, .fitness-trainer__info__second {
+      display: none; }
+    .fitness-trainer__info__text {
+      margin-top: 25px; }
+  .fitness-trainer__button {
+    margin-top: 30px; }
+
+.fitness-programs {
+  overflow: hidden;
+  padding-bottom: 92px; }
+  .fitness-programs__item__title {
+    display: none; }
+  .fitness-programs__item__title:hover {
+    color: #282828; }
+  .fitness-programs__list .head01 {
+    margin-bottom: -24px; }
+  .fitness-programs__list .programs__item__title {
+    padding-bottom: 10px; }
+  .fitness-programs__list__shift {
+    display: none; }
+  .fitness-programs .programs__item__content {
+    opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  .fitness-programs__item__description {
+    opacity: 0;
+    transition: opacity 0.33s ease-in; }
+    .fitness-programs__item__description.is-animated {
+      opacity: 1; }
+
+.fitness-other-programs {
+  margin-top: 42px;
+  opacity: 0;
+  text-align: left;
+  position: relative;
+  z-index: 3; }
+  .fitness-other-programs-2 {
+    display: none; }
+  .fitness-other-programs.is-animated {
+    opacity: 1;
+    transition: opacity 0.33s ease-in 0.3s; }
+  .fitness-other-programs__list {
+    padding-top: 11px;
+    color: #282828; }
+    .fitness-other-programs__list li {
+      margin-top: 12px; }
+    .fitness-other-programs__list__item {
+      letter-spacing: 1px;
+      font-family: "PT Serif", serif;
+      text-transform: uppercase; }
+
+.fitness-extra__content {
+  padding: 59px 0 49px;
+  background: #ffffff; }
+  .fitness-extra__content .head01 {
+    padding-bottom: 14px; }
+  .fitness-extra__content__right {
+    padding-top: 24px; }
+    .fitness-extra__content__right .head01 {
+      display: none; }
+  .fitness-extra__content__shift {
+    display: none; }
+.fitness-extra__button-1 {
+  display: none; }
+.fitness-extra__button-2 {
+  margin-top: 22px;
+  margin-bottom: 35px; }
+  .fitness-extra__button-2 .btn {
+    width: 100%;
+    max-width: 260px; }
+
+@media screen and (min-width: 414px) {
+  .promo-fitness__person-pos {
+    min-height: 520px;
+    max-height: 736px; } }
+@media screen and (min-width: 480px) {
+  .promo-fitness__person-pos {
+    min-height: 680px; }
+  .promo-fitness__person {
+    height: 440px;
+    left: -65px;
+    margin-top: -220px;
+    background-size: contain; } }
+@media screen and (min-width: 760px) {
+  .promo-fitness {
+    position: relative;
+    padding-bottom: 88px; }
+    .promo-fitness::before {
+      content: "";
+      display: block;
+      width: 50%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      background: #e9eae4; }
+    .promo-fitness__navigation {
+      display: block;
+      right: 0;
+      top: 50%;
+      bottom: inherit;
+      margin-top: -207px;
+      direction: ltr; }
+      .promo-fitness__navigation .gallery__navigation-prev-text,
+      .promo-fitness__navigation .gallery__navigation-next-text {
+        display: inline; }
+    .promo-fitness__person-pos {
+      position: relative;
+      z-index: 3;
+      max-height: 760px; }
+    .promo-fitness__person {
+      height: 506px;
+      margin-top: -236px;
+      margin-left: -4px;
+      background-size: contain; }
+    .promo-fitness__text {
+      position: relative;
+      z-index: 2; }
+
+  .fitness-trainer {
+    margin-top: 100px;
+    padding-bottom: 94px; }
+    .fitness-trainer__img {
+      min-height: 340px;
+      margin: 0; }
+      .fitness-trainer__img__src {
+        display: block;
+        width: 60%;
+        height: auto;
+        opacity: 0; }
+    .fitness-trainer__photo-block {
+      font-size: 0;
+      line-height: 0;
+      position: relative; }
+    .fitness-trainer__logo {
+      width: 43%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: 0; }
+    .fitness-trainer__photo {
+      width: 57%;
+      display: inline-block;
+      vertical-align: top;
+      margin: 0;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover; }
+      .fitness-trainer__photo__src {
+        opacity: 0; }
+      .gym .fitness-trainer__photo {
+        background-image: url("../images/fitness/gym/person01.jpg"); }
+      .yoga .fitness-trainer__photo {
+        background-image: url("../images/fitness/yoga/person01.jpg"); }
+      .group .fitness-trainer__photo {
+        background-image: url("../images/fitness/group/person01.jpg"); }
+      .cycle .fitness-trainer__photo {
+        background-image: url("../images/fitness/cycle/person01.jpg"); }
+      .swimming .fitness-trainer__photo {
+        background-image: url("../images/fitness/swimming/person01.jpg"); }
+      .nutrition .fitness-trainer__photo {
+        background-image: url("../images/fitness/nutrition/person01.jpg"); }
+      .children .fitness-trainer__photo {
+        background-image: url("../images/fitness/children/person01.jpg"); }
+      .fighting .fitness-trainer__photo {
+        background-image: url("../images/fitness/fighting/person01.jpg"); }
+
+  .fitness-programs {
+    position: relative;
+    padding-bottom: 0; }
+    .fitness-programs .head01 {
+      max-width: 75%;
+      margin-left: 30px;
+      padding-bottom: 40px;
+      text-align: left; }
+    .fitness-programs__list {
+      font-size: 0;
+      line-height: 0;
+      position: relative;
+      z-index: 3;
+      margin-right: -40px;
+      padding-right: 40px;
+      padding-bottom: 90px; }
+      .fitness-programs__list::before {
+        content: "";
+        display: block;
+        width: 50%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+        background: #e9eae4; }
+      .fitness-programs__list__left {
+        width: 43%;
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 89px;
+        text-align: right; }
+      .fitness-programs__list__shift {
+        width: 14%;
+        display: inline-block;
+        vertical-align: top; }
+      .fitness-programs__list__right {
+        width: 43%;
+        display: inline-block;
+        vertical-align: top;
+        padding-top: 47px;
+        position: relative;
+        z-index: 3; }
+    .fitness-programs__item {
+      width: 100%;
+      padding: 0;
+      margin-top: 38px; }
+      .fitness-programs__list__left .fitness-programs__item {
+        margin-right: -15px; }
+      .fitness-programs__list__right .fitness-programs__item {
+        margin-left: -15px; }
+      .fitness-programs__item .programs__item__content {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+        text-align: left; }
+
+  .fitness-other-programs {
+    margin-top: 46px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 28px; }
+    .fitness-other-programs-1 {
+      display: none; }
+    .fitness-other-programs-2 {
+      width: 100%;
+      display: inline-block;
+      text-align: left;
+      padding: 0 40px 0 30px; }
+
+  .fitness-extra {
+    position: relative; }
+    .fitness-extra::before {
+      content: "";
+      display: block;
+      width: 50%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 1;
+      background: #e9eae4; }
+    .fitness-extra__content {
+      position: relative;
+      z-index: 2; }
+      .fitness-extra__content .content__wrapper {
+        width: 83.33%;
+        padding: 0;
+        margin: 0 auto; }
+      .fitness-extra__content__right {
+        font-size: 0;
+        line-height: 0; }
+    .fitness-extra__list-left, .fitness-extra__list-right, .fitness-extra__list-left-2, .fitness-extra__list-right-2 {
+      width: 100%; }
+    .fitness-extra__list {
+      font-size: 0;
+      line-height: 0;
+      margin: 0 -10px; }
+      .fitness-extra__list li {
+        padding: 0 10px; }
+      .fitness-extra__list__item {
+        width: 100%;
+        display: inline-block;
+        vertical-align: top; } }
+@media screen and (min-width: 1000px) {
+  .promo-fitness {
+    padding-bottom: 40px;
+    font-size: 0;
+    line-height: 0;
+    direction: rtl; }
+    .promo-fitness::before {
+      display: none; }
+    .promo-fitness__navigation {
+      margin-top: -149px; }
+    .promo-fitness__person-pos {
+      width: 57%;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: center;
+      direction: ltr; }
+    .promo-fitness__person {
+      width: 100%;
+      left: 0;
+      right: inherit;
+      height: auto;
+      margin-left: -53px;
+      background-image: none !important; }
+      .promo-fitness__person img {
+        display: block;
+        width: 100%;
+        min-width: 740px;
+        height: auto; }
+    .promo-fitness__text {
+      width: 43%;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0;
+      padding-right: 40px;
+      padding-top: 128px;
+      font-size: 16px;
+      line-height: 28px;
+      direction: ltr; }
+      .promo-fitness__text .head01 {
+        width: 70%; }
+      .promo-fitness__text::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 100%;
+        bottom: 8px;
+        z-index: 1;
+        width: 5000px;
+        height: 3000px;
+        background: #e9eae4; }
+
+  .fitness-trainer {
+    padding-bottom: 102px; }
+    .fitness-trainer__photo-block {
+      display: none; }
+    .fitness-trainer__info {
+      margin: 0 auto;
+      font-size: 0;
+      line-height: 0; }
+      .fitness-trainer__info__photo {
+        width: 58.33%;
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 10px 0 0; }
+        .fitness-trainer__info__photo-pos {
+          position: relative; }
+        .fitness-trainer__info__photo img {
+          width: 100%;
+          height: auto;
+          position: absolute;
+          left: 0;
+          bottom: 0; }
+      .fitness-trainer__info__content {
+        width: 41.67%;
+        height: 290px;
+        display: inline-block;
+        vertical-align: bottom;
+        padding: 108px 0 0 30px;
+        font-size: 16px;
+        line-height: 28px; }
+      .fitness-trainer__info__text {
+        display: none; }
+      .fitness-trainer__info .fitness-trainer__button {
+        display: none; }
+      .fitness-trainer__info__second {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        font-size: 0;
+        line-height: 0; }
+        .fitness-trainer__info__second-pos {
+          position: relative;
+          display: inline-block;
+          vertical-align: top; }
+        .fitness-trainer__info__second__text {
+          width: 33.33%;
+          display: inline-block;
+          vertical-align: middle;
+          text-align: right;
+          padding: 50px 30px 0 0;
+          font-size: 16px;
+          line-height: 28px; }
+        .fitness-trainer__info__second__logo {
+          width: auto;
+          left: 33.33%;
+          right: 41.67%;
+          margin: 0 10px; }
+          .fitness-trainer__info__second__logo::after {
+            height: 120px;
+            margin-top: -60px; }
+            .gym .fitness-trainer__info__second__logo::after {
+              width: 120px;
+              margin-left: -60px; }
+            .yoga .fitness-trainer__info__second__logo::after {
+              width: 115px;
+              margin-left: -57px; }
+            .group .fitness-trainer__info__second__logo::after {
+              width: 176px;
+              margin-left: -88px; }
+            .cycle .fitness-trainer__info__second__logo::after {
+              width: 120px;
+              margin-left: -60px; }
+            .swimming .fitness-trainer__info__second__logo::after {
+              width: 120px;
+              margin-left: -60px; }
+            .nutrition .fitness-trainer__info__second__logo::after {
+              width: 115px;
+              margin-left: -57px; }
+            .children .fitness-trainer__info__second__logo::after {
+              width: 120px;
+              margin-left: -60px; }
+            .fighting .fitness-trainer__info__second__logo::after {
+              width: 120px;
+              margin-left: -60px; }
+          .fitness-trainer__info__second__logo-space {
+            width: 25%;
+            display: inline-block;
+            vertical-align: middle; }
+        .fitness-trainer__info__second__photo {
+          width: 41.67%;
+          display: inline-block;
+          vertical-align: middle; }
+          .fitness-trainer__info__second__photo img {
+            width: 100%;
+            height: auto; }
+          .fitness-trainer__info__second__photo__shift {
+            margin-left: -10px; }
+
+  .fitness-programs {
+    padding-bottom: 93px; }
+    .fitness-programs .head01 {
+      display: inline-block;
+      text-align: right;
+      margin: 0 15px 0 0;
+      padding-bottom: 15px; }
+    .fitness-programs__list {
+      margin-right: 0;
+      padding-right: 0;
+      padding-bottom: 0; }
+      .fitness-programs__list::before {
+        width: 3000px;
+        left: 43%;
+        bottom: -1000px;
+        right: inherit; }
+      .fitness-programs__list__left {
+        width: 33.3%;
+        margin-left: 25px;
+        text-align: right; }
+      .fitness-programs__list__shift {
+        width: 19.4%; }
+      .fitness-programs__list__right {
+        width: 33.3%;
+        margin-left: -50px; }
+    .fitness-programs__list__left .fitness-programs__item {
+      margin-right: 0; }
+    .fitness-programs__list__right .fitness-programs__item {
+      margin-left: 0; }
+    .fitness-programs .programs__item__content {
+      text-align: left; }
+
+  .fitness-other-programs {
+    width: 154%;
+    max-width: 600px;
+    padding-left: 15px;
+    margin-top: 94px; }
+    .fitness-other-programs__list {
+      font-size: 0;
+      line-height: 0;
+      margin: 0 -10px; }
+      .fitness-other-programs__list li {
+        padding: 0 10px; }
+      .fitness-other-programs__list__item {
+        width: 50%;
+        display: inline-block;
+        vertical-align: top;
+        font-size: 16px;
+        line-height: 28px; }
+        .fitness-other-programs-2 .fitness-other-programs__list__item {
+          width: 100%; }
+
+  .fitness-extra {
+    position: relative;
+    z-index: 3; }
+    .fitness-extra .content__wrapper {
+      width: 100%; }
+    .fitness-extra__content {
+      padding: 89px 0 79px;
+      font-size: 0;
+      line-height: 0; }
+      .fitness-extra__content__left {
+        width: 41.67%;
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 10px 0 40px;
+        text-align: right;
+        font-size: 16px;
+        line-height: 28px; }
+        .fitness-extra__content__left .head01 {
+          display: none; }
+        .fitness-extra__content__left__text {
+          width: 100%;
+          max-width: 390px;
+          min-width: 315px;
+          display: inline-block;
+          text-align: right;
+          padding-top: 6px; }
+      .fitness-extra__content__shift {
+        width: 11.06%;
+        display: inline-block;
+        vertical-align: top; }
+      .fitness-extra__content__right {
+        width: 47.27%;
+        display: inline-block;
+        vertical-align: top;
+        padding: 0 20px 0 0;
+        margin-left: -10px;
+        font-size: 16px;
+        line-height: 28px; }
+        .fitness-extra__content__right .head01 {
+          display: block; }
+    .fitness-extra__list-left-2, .fitness-extra__list-right-2 {
+      display: block;
+      width: 100%; }
+    .fitness-extra__list__item {
+      width: 100%; }
+    .fitness-extra__button-1 {
+      display: block; }
+    .fitness-extra__button-2 {
+      display: none; }
+
+  .footer {
+    position: relative;
+    z-index: 3; }
+    .footer-bottom__documents__forms {
+      padding-left: 16px; } }
+@media screen and (min-width: 1320px) {
+  .promo-fitness {
+    padding-bottom: 25px; }
+    .promo-fitness .content__wrapper {
+      position: relative; }
+      .promo-fitness .content__wrapper::before {
+        content: "";
+        display: block;
+        height: 20px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -20px;
+        z-index: 3;
+        background: #ffffff; }
+      .promo-fitness .content__wrapper::after {
+        content: "";
+        display: block;
+        width: 20px;
+        position: absolute;
+        right: -20px;
+        top: -20px;
+        bottom: 0;
+        z-index: 3;
+        background: #ffffff; }
+    .promo-fitness__arrow {
+      width: 8px;
+      height: 68px;
+      position: absolute;
+      z-index: 9;
+      left: 40px;
+      bottom: 15px;
+      background-image: url("../images/arrow.png");
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 100%; }
+    .promo-fitness__navigation {
+      right: -20px;
+      width: auto;
+      height: 125px; }
+      .promo-fitness__navigation a:hover {
+        color: #282828; }
+      .promo-fitness__navigation .gallery__navigation-next-text {
+        margin-top: 5px; }
+      .promo-fitness__navigation .gallery__navigation-prev-text,
+      .promo-fitness__navigation .gallery__navigation-next-text {
+        display: block;
+        font-size: 16px;
+        line-height: 28px;
+        position: relative;
+        white-space: nowrap; }
+        .promo-fitness__navigation .gallery__navigation-prev-text span,
+        .promo-fitness__navigation .gallery__navigation-next-text span {
+          position: absolute;
+          right: 80px;
+          top: 16px; }
+    .promo-fitness__person-pos {
+      margin-top: -15px;
+      min-height: 680px;
+      max-height: 800px; }
+    .promo-fitness__person {
+      margin-left: -51px; }
+      .promo-fitness__person img {
+        min-width: 718px; }
+    .promo-fitness__text {
+      padding-top: 68px; }
+      .promo-fitness__text .head01 {
+        padding-bottom: 25px; }
+    .promo-fitness__button {
+      margin-top: 42px; }
+
+  .fitness-trainer {
+    padding-bottom: 150px; }
+    .fitness-trainer__info {
+      width: 88%; }
+      .fitness-trainer__info__photo {
+        width: 58.33%;
+        padding: 0; }
+      .fitness-trainer__info__content {
+        width: 40%;
+        height: 300px;
+        padding: 92px 0 0 40px; }
+      .fitness-trainer__info__second {
+        width: 88%; }
+        .fitness-trainer__info__second__text {
+          width: 32%;
+          padding: 40px 40px 0 0; }
+          .fitness-trainer__info__second__text-pos {
+            width: 85%;
+            display: inline-block; }
+        .fitness-trainer__info__second__logo-space {
+          width: 26.33%; }
+        .fitness-trainer__info__second__logo {
+          width: 26.33%;
+          left: 32%;
+          right: inherit;
+          margin: 0; }
+        .fitness-trainer__info__second__photo {
+          width: 41.67%; }
+          .fitness-trainer__info__second__photo__shift {
+            margin: 0;
+            padding-right: 30px; }
+    .fitness-trainer__button {
+      margin-top: 40px; }
+
+  .fitness-programs {
+    padding-bottom: 142px; }
+    .fitness-programs .head01 {
+      width: 50%;
+      padding-right: 10px;
+      padding-bottom: 85px; }
+    .fitness-programs__list {
+      margin: 0 0 0 -10px;
+      padding: 0; }
+      .fitness-programs__list::before {
+        left: 34.67%; }
+      .fitness-programs__list__shift {
+        display: none; }
+      .fitness-programs__list__left {
+        width: 50%;
+        margin: 0;
+        padding: 140px 10px 0 0;
+        position: relative;
+        z-index: 3;
+        text-align: left; }
+      .fitness-programs__list__right {
+        width: 50%;
+        margin: 0;
+        padding: 91px 0 0 10px; }
+    .fitness-programs .programs__item__link .programs__item__title {
+      display: none; }
+    .fitness-programs .programs__item__description {
+      width: 50%;
+      display: inline-block;
+      vertical-align: top;
+      padding: 53px 15px 0 30px; }
+    .fitness-programs__item {
+      margin-top: 50px; }
+      .fitness-programs__item__img-pos {
+        width: 50%;
+        display: inline-block;
+        vertical-align: top; }
+      .fitness-programs__item__title {
+        width: 75%;
+        display: block;
+        margin: 0; }
+
+  .fitness-other-programs {
+    width: 100%;
+    padding-left: 10px;
+    margin-top: 102px; }
+    .fitness-other-programs-2 {
+      margin-top: 62px; }
+    .fitness-other-programs-2 .fitness-other-programs__list__item {
+      width: 50%; }
+
+  .fitness-extra__content {
+    padding: 138px 0 128px; }
+    .fitness-extra__content__left {
+      width: 41.67%;
+      margin: 0;
+      padding: 0 15px 0 0; }
+      .fitness-extra__content__left__text {
+        width: 80%;
+        padding-top: 20px; }
+    .fitness-extra__content__shift {
+      width: 8.33%; }
+    .fitness-extra__content__right {
+      width: 50%;
+      margin: 0;
+      padding: 14px 0 0 15px; }
+
+  .footer-bottom__documents__forms {
+    padding-left: 15px; } }
+@media screen and (min-width: 1600px) {
+  .promo-fitness {
+    padding-bottom: 77px; }
+    .promo-fitness .content__wrapper::before {
+      height: 30px;
+      top: -30px; }
+    .promo-fitness .content__wrapper::after {
+      width: 30px;
+      right: -30px;
+      top: -30px; }
+    .promo-fitness__navigation {
+      right: -30px;
+      margin-top: -133px; }
+    .promo-fitness__person-pos {
+      min-height: 700px;
+      max-height: 100%;
+      margin-top: -27px; }
+    .promo-fitness__person {
+      width: auto;
+      margin-left: -82px;
+      margin-right: 45px; }
+    .promo-fitness__text {
+      padding-top: 83px; }
+      .promo-fitness__text .head01 {
+        width: 60%; }
+      .promo-fitness__text::before {
+        margin-left: -8px; }
+
+  .fitness-trainer {
+    padding-bottom: 200px; }
+    .fitness-trainer .head02 {
+      font-size: 36px;
+      line-height: 48px; }
+    .fitness-trainer__info {
+      width: 87%;
+      padding: 0 30px; }
+      .fitness-trainer__info__photo {
+        width: 59%; }
+      .fitness-trainer__info__content {
+        height: 350px;
+        padding: 142px 0 0 50px; }
+      .fitness-trainer__info__second {
+        width: 87%;
+        padding: 0 30px; }
+        .fitness-trainer__info__second .head02 {
+          padding-bottom: 12px; }
+        .fitness-trainer__info__second__text {
+          width: 31.1%;
+          padding: 21px 50px 0 0; }
+        .fitness-trainer__info__second__logo-space {
+          width: 27.9%; }
+        .fitness-trainer__info__second__logo {
+          width: 27.9%;
+          left: 31.1%; }
+        .fitness-trainer__info__second__photo {
+          width: 41%; }
+          .fitness-trainer__info__second__photo__shift {
+            padding-right: 0; }
+
+  .fitness-programs {
+    padding-bottom: 192px; }
+    .fitness-programs__list {
+      margin: 0 -15px;
+      padding-top: 50px; }
+      .fitness-programs__list::before {
+        margin-left: -3px; }
+      .fitness-programs__list__left {
+        padding-right: 0; }
+      .fitness-programs__list__right {
+        padding-left: 0; }
+    .fitness-programs__item {
+      margin-top: 45px; }
+      .fitness-programs__item .programs__item__description {
+        width: 43%;
+        padding-left: 35px; }
+      .fitness-programs__item__title {
+        font-size: 36px;
+        line-height: 48px; }
+
+  .fitness-other-programs {
+    max-width: 100%;
+    margin-top: 88px;
+    padding-left: 15px; }
+    .fitness-other-programs-2 {
+      margin-top: 102px; }
+    .fitness-other-programs__list {
+      width: 78%;
+      max-width: 582px;
+      margin: 0 -15px; }
+      .fitness-other-programs__list li {
+        padding: 0 15px; }
+
+  .fitness-extra__content__left__text {
+    width: 85%;
+    max-width: 510px;
+    padding-top: 24px; }
+  .fitness-extra__content__right {
+    padding-top: 12px; }
+  .fitness-extra__content__item .head02 {
+    font-size: 36px;
+    line-height: 48px;
+    padding-bottom: 12px; } }
+@media screen and (min-width: 1900px) {
+  .promo-fitness {
+    text-align: left;
+    padding-bottom: 65px; }
+    .promo-fitness__person-pos {
+      margin-top: 0;
+      max-height: 100%; }
+    .promo-fitness__person {
+      top: 0;
+      margin-top: 50px;
+      margin-left: -46px;
+      margin-right: 0; }
+    .promo-fitness__text {
+      max-width: 750px;
+      padding-top: 110px;
+      padding-right: 65px; }
+      .promo-fitness__text::before {
+        margin-left: -10px; }
+
+  .fitness-trainer {
+    padding-bottom: 250px;
+    max-width: 2300px;
+    margin-left: auto;
+    margin-right: auto; }
+    .fitness-trainer__info {
+      width: 86.6%; }
+      .fitness-trainer__info__content {
+        height: 400px;
+        padding: 192px 0 0 72px; }
+      .fitness-trainer__info__second {
+        width: 86.6%; }
+        .fitness-trainer__info__second__text {
+          margin-top: -52px;
+          padding: 0 72px 0 0; }
+
+  .fitness-programs {
+    padding-bottom: 242px;
+    max-width: 2300px;
+    margin-left: auto;
+    margin-right: auto; }
+    .fitness-programs .head01 {
+      padding-bottom: 67px; }
+    .fitness-programs .programs__item__description {
+      padding-top: 65px; }
+    .fitness-programs__list::before {
+      margin-left: -8px; }
+    .fitness-programs__list__left {
+      padding-top: 137px; }
+
+  .fitness-other-programs {
+    margin-top: 100px; }
+    .fitness-other-programs__list {
+      width: 68%; }
+
+  .fitness-extra {
+    max-width: 2300px;
+    margin-left: auto;
+    margin-right: auto; }
+    .fitness-extra__content {
+      padding-top: 136px; }
+      .fitness-extra__content__left__text {
+        padding-top: 79px; }
+      .fitness-extra__content__right {
+        padding-top: 62px; } }
+/*** tests ** */
+.overlay_test.fitness320 {
+  background: #ff0000 url("../images/makets/fitness320.jpg") no-repeat center 0; }
+
+.overlay_test.fitness760 {
+  background: #ff0000 url("../images/makets/fitness760.jpg") no-repeat center 0; }
+
+.overlay_test.fitness1000 {
+  background: #ff0000 url("../images/makets/fitness1000.jpg") no-repeat center 0; }
+
+.overlay_test.fitness1320 {
+  background: #ff0000 url("../images/makets/fitness1320.jpg") no-repeat center -20px; }
+
+.overlay_test.fitness1600 {
+  background: #ff0000 url("../images/makets/fitness1600.jpg") no-repeat center 21px; }
+
+.overlay_test.fitness1900 {
+  background: #ff0000 url("../images/makets/fitness1900.jpg") no-repeat center 26px; }

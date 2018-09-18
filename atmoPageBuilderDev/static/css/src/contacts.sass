@@ -1,0 +1,229 @@
+@import variables
+
+// CONTACTS
+body.contacts
+  background: $bg-color
+
+.contacts
+  &__wrapper
+    padding-top: 90px
+    padding-bottom: $pd
+
+  &__content
+    background: $color-white
+    min-height: 460px
+    position: relative
+
+  &__map
+    position: relative
+
+    &__img
+      font-size: 0
+      line-height: 0
+      position: relative
+      z-index: 1
+      opacity: 0
+
+      img
+        max-height: 320px
+  
+    &__dynamic
+      position: absolute
+      left: 0
+      top: 0
+      right: 0
+      bottom: 0
+      z-index: 2
+
+  &__text-pos
+    min-height: 240px
+
+  &__text
+    padding: 0 $pd
+
+    .head01
+      margin-bottom: 13px
+
+    &__line
+      display: block
+
+  &__socials-text
+    display: none
+
+  &__socials
+    margin-top: 12px
+    font-size: 0
+    line-height: 0
+
+
+@media screen and (min-width: 480px)
+  .contacts
+    &__wrapper
+      padding-top: 100px
+
+    .content__wrapper
+      padding: 0 $pd
+
+
+@media screen and (min-width: 540px)
+  .contacts
+    &__map
+      &__img
+        img
+          max-height: 390px
+
+
+@media screen and (min-width: 760px)
+  .contacts
+    .content__wrapper
+      padding: 0 $pd*2
+
+    .head01
+      font-size: 44px
+      line-height: 58px
+      margin-bottom: 24px
+
+    &__wrapper
+      padding-top: 120px
+
+    &__content
+      min-height: 700px
+      
+    &__text-pos
+      width: 83.33%
+      margin-left: auto
+      margin-right: auto
+
+    &__text
+      padding: 0
+
+      &__line
+        display: inline
+
+    &__socials-text
+      display: block
+      margin-top: 24px
+    
+
+
+@media screen and (min-width: 1000px)
+  .contacts
+    &__wrapper
+      padding-bottom: $pd*2
+
+    &__content
+      min-height: inherit
+
+    &__map
+      z-index: 1
+
+      &__img
+        img
+          display: none
+
+    &__text-shift
+      height: 1px
+      position: absolute
+      left: -$pd*2
+      right: -$pd
+      bottom: -$pd*2
+      z-index: 2
+
+    &__text-pos
+      width: 50%
+      margin-left: 0
+      margin-right: 0
+      position: absolute
+      left: 0
+      top: -318px
+      bottom: 0
+      background: $color-white
+
+    &__text
+      position: absolute
+      left: $pd*2
+      bottom: $pd*2
+
+
+@media screen and (min-width: 1320px)
+  body.contacts
+    padding: $pd 0 0
+    background: $color-white
+
+  .content__wrapper-back
+    background: $bg-color
+
+  .contacts
+    .content__border
+      margin: 0
+      padding: 0 $pd $pd
+      background: $color-white
+
+    &__wrapper
+      padding-top: 130px
+
+    &__text-pos
+      width: 41.67%
+      top: -370px
+
+
+@media screen and (min-width: 1600px)
+  .contacts
+    .content__wrapper
+      padding: 0 30px
+
+    &__text-shift
+      left: 8.33%
+      right: -$pd*2
+
+    &__text-pos
+      width: 44.5%
+      top: -415px
+
+    &__text
+      left: 75px
+
+
+@media screen and (min-width: 1900px)
+  body.contacts
+    padding: 30px 0 0
+
+  .contacts
+    .head01
+      font-size: 56px
+      line-height: 68px
+
+    .content__wrapper
+      padding: 0 65px 65px
+
+    .content__border
+      padding: 0 30px 30px
+
+    &__wrapper
+      padding-top: 140px
+      padding-bottom: 65px
+      margin-bottom: -65px
+
+    &__text-shift
+      right: -65px
+      bottom: -65px
+
+    &__text
+      left: 20%
+      bottom: 65px
+      margin-left: -30px
+
+
+
+/*** tests ***/
+.overlay_test.contacts320
+  background: #ff0000 url('../images/makets/contacts320.jpg') no-repeat center 0
+.overlay_test.contacts760
+  background: #ff0000 url('../images/makets/contacts760.jpg') no-repeat center 0
+.overlay_test.contacts1000
+  background: #ff0000 url('../images/makets/contacts1000.jpg') no-repeat center 0
+.overlay_test.contacts1320
+  background: #ff0000 url('../images/makets/contacts1320.jpg') no-repeat center -20px
+.overlay_test.contacts1900
+  background: #ff0000 url('../images/makets/contacts1900.jpg') no-repeat center -189px
+

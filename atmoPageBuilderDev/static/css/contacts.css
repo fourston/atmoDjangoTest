@@ -1,0 +1,168 @@
+body.contacts {
+  background: #f6f5f1; }
+
+.contacts__wrapper {
+  padding-top: 90px;
+  padding-bottom: 20px; }
+.contacts__content {
+  background: #ffffff;
+  min-height: 460px;
+  position: relative; }
+.contacts__map {
+  position: relative; }
+  .contacts__map__img {
+    font-size: 0;
+    line-height: 0;
+    position: relative;
+    z-index: 1;
+    opacity: 0; }
+    .contacts__map__img img {
+      max-height: 320px; }
+  .contacts__map__dynamic {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2; }
+.contacts__text-pos {
+  min-height: 240px; }
+.contacts__text {
+  padding: 0 20px; }
+  .contacts__text .head01 {
+    margin-bottom: 13px; }
+  .contacts__text__line {
+    display: block; }
+.contacts__socials-text {
+  display: none; }
+.contacts__socials {
+  margin-top: 12px;
+  font-size: 0;
+  line-height: 0; }
+
+@media screen and (min-width: 480px) {
+  .contacts__wrapper {
+    padding-top: 100px; }
+  .contacts .content__wrapper {
+    padding: 0 20px; } }
+@media screen and (min-width: 540px) {
+  .contacts__map__img img {
+    max-height: 390px; } }
+@media screen and (min-width: 760px) {
+  .contacts .content__wrapper {
+    padding: 0 40px; }
+  .contacts .head01 {
+    font-size: 44px;
+    line-height: 58px;
+    margin-bottom: 24px; }
+  .contacts__wrapper {
+    padding-top: 120px; }
+  .contacts__content {
+    min-height: 700px; }
+  .contacts__text-pos {
+    width: 83.33%;
+    margin-left: auto;
+    margin-right: auto; }
+  .contacts__text {
+    padding: 0; }
+    .contacts__text__line {
+      display: inline; }
+  .contacts__socials-text {
+    display: block;
+    margin-top: 24px; } }
+@media screen and (min-width: 1000px) {
+  .contacts__wrapper {
+    padding-bottom: 40px; }
+  .contacts__content {
+    min-height: inherit; }
+  .contacts__map {
+    z-index: 1; }
+    .contacts__map__img img {
+      display: none; }
+  .contacts__text-shift {
+    height: 1px;
+    position: absolute;
+    left: -40px;
+    right: -20px;
+    bottom: -40px;
+    z-index: 2; }
+  .contacts__text-pos {
+    width: 50%;
+    margin-left: 0;
+    margin-right: 0;
+    position: absolute;
+    left: 0;
+    top: -318px;
+    bottom: 0;
+    background: #ffffff; }
+  .contacts__text {
+    position: absolute;
+    left: 40px;
+    bottom: 40px; } }
+@media screen and (min-width: 1320px) {
+  body.contacts {
+    padding: 20px 0 0;
+    background: #ffffff; }
+
+  .content__wrapper-back {
+    background: #f6f5f1; }
+
+  .contacts .content__border {
+    margin: 0;
+    padding: 0 20px 20px;
+    background: #ffffff; }
+  .contacts__wrapper {
+    padding-top: 130px; }
+  .contacts__text-pos {
+    width: 41.67%;
+    top: -370px; } }
+@media screen and (min-width: 1600px) {
+  .contacts .content__wrapper {
+    padding: 0 30px; }
+  .contacts__text-shift {
+    left: 8.33%;
+    right: -40px; }
+  .contacts__text-pos {
+    width: 44.5%;
+    top: -415px; }
+  .contacts__text {
+    left: 75px; } }
+@media screen and (min-width: 1900px) {
+  body.contacts {
+    padding: 30px 0 0; }
+
+  .contacts .head01 {
+    font-size: 56px;
+    line-height: 68px; }
+  .contacts .content__wrapper {
+    padding: 0 65px 65px; }
+  .contacts .content__border {
+    padding: 0 30px 30px; }
+  .contacts__wrapper {
+    padding-top: 140px;
+    padding-bottom: 65px;
+    margin-bottom: -65px; }
+  .contacts__text-shift {
+    right: -65px;
+    bottom: -65px; }
+  .contacts__text {
+    left: 20%;
+    bottom: 65px;
+    margin-left: -30px; } }
+/*** tests ** */
+.overlay_test.contacts320 {
+  background: #ff0000 url("../images/makets/contacts320.jpg") no-repeat center 0; }
+
+.overlay_test.contacts760 {
+  background: #ff0000 url("../images/makets/contacts760.jpg") no-repeat center 0; }
+
+.overlay_test.contacts1000 {
+  background: #ff0000 url("../images/makets/contacts1000.jpg") no-repeat center 0; }
+
+.overlay_test.contacts1320 {
+  background: #ff0000 url("../images/makets/contacts1320.jpg") no-repeat center -20px; }
+
+.overlay_test.contacts1900 {
+  background: #ff0000 url("../images/makets/contacts1900.jpg") no-repeat center -189px; }
+
+/*# sourceMappingURL=contacts.css.map */

@@ -1,0 +1,6 @@
+# setings.cnf
+[client]
+database = atmodjango
+user = root
+password = 132224615
+default-character-set = utf8

@@ -1,0 +1,168 @@
+@import variables
+
+// 404
+
+.page404
+  height: auto
+
+  .content__border
+    margin-bottom: 0
+    background: $color-white
+
+.page-404
+  min-height: 560px
+  position: relative
+
+  &__content
+    padding-top: 108px
+
+  &__title
+    margin-bottom: 14px
+    color: $color-dark
+    font-size: 32px
+    line-height: 46px
+    font-family: 'PT Serif', serif
+
+  &__img
+    font-size: 0
+    line-height: 0
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+
+    &-small
+      display: block
+      max-width: 600px
+      margin: 0 auto
+
+    &-large
+      display: none
+
+
+@media screen and (min-width: 340px)
+  .page-404
+    min-height: 600px
+
+@media screen and (min-width: 450px)
+  .page-404
+    min-height: 680px
+
+@media screen and (min-width: 560px)
+  .page-404
+    min-height: 736px
+
+@media screen and (min-width: 760px)
+  .page-404
+    margin-left: $pd
+    margin-right: $pd
+    min-height: 880px
+
+    &__content
+      padding-top: 177px
+
+      .content__wrapper
+        padding: 0 $pd
+
+    &__title
+      font-size: 44px
+      line-height: 58px
+      margin-bottom: 25px
+
+    &__img
+      width: 66.67%
+      max-height: 540px
+      margin: 0 auto
+      padding-left: $pd
+      padding-right: $pd
+
+      &-small
+        display: none
+      
+      &-large
+        display: block
+
+
+@media screen and (min-width: 1000px)
+  .page-404
+    min-height: 660px
+
+    &__content
+      width: 42%
+      height: 195px
+      position: absolute
+      left: 0
+      top: 50%
+      margin-top: -55px
+      padding: 0
+    
+    &__img
+      width: 55%
+      max-width: 583px
+      max-height: inherit
+      left: inherit
+      right: $pd
+      top: 0
+      bottom: 0
+      background: url('../images/404/picture_large.jpg') no-repeat center bottom
+      background-size: 100%
+
+      img
+        display: none
+
+  
+@media screen and (min-width: 1320px)
+  .page-404
+    min-height: 680px
+
+    &__content
+      margin-top: -42px
+
+    &__title
+      font-size: 56px
+      line-height: 68px
+
+    &__img
+      width: 47%
+      max-width: 640px
+      top: -$pd
+
+@media screen and (min-width: 1600px)
+  .page-404
+    min-height: 680px
+    margin-left: 10px
+    margin-right: 10px
+
+    &__title
+      font-size: 80px
+      line-height: 84px
+
+    &__img
+      width: 47%
+      max-width: 840px
+      top: -30px
+
+
+@media screen and (min-width: 1900px)
+  .page-404
+    min-height: 900px
+
+
+
+/*** tests ***/
+.overlay_test.page404_320
+  background: #ff0000 url('../images/makets/Page404-320.jpg') no-repeat center 0
+
+.overlay_test.page404_760
+  background: #ff0000 url('../images/makets/Page404-760.jpg') no-repeat center 0
+
+.overlay_test.page404_1000
+  background: #ff0000 url('../images/makets/Page404-1000.jpg') no-repeat center 0
+
+.overlay_test.page404_1320
+  background: #ff0000 url('../images/makets/Page404-1320.jpg') no-repeat center 0
+
+.overlay_test.page404_1900
+  background: #ff0000 url('../images/makets/Page404-1900.jpg') no-repeat center -30px
+
+

@@ -1,0 +1,695 @@
+@import variables
+
+@keyframes about-slide01
+  0%
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)
+  5%
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+  28%
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+  33%
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%)
+  100%
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%)
+
+@keyframes about-slide02
+  0%
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)
+  31%
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)
+  36%
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+  62%
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+  67%
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%)
+  100%
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%)
+
+@keyframes about-slide03
+  0%
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)
+  65%
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)
+  70%
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+  95%
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+  100%
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%)
+
+
+// ABOUT
+.promo-about
+  padding-top: 90px
+  background: $bg-color
+
+  &__img
+    position: relative
+    z-index: 1
+    margin-left: -$pd
+    margin-right: -$pd
+    background: $color-dark-blue
+    min-height: 400px
+    overflow: hidden
+
+    &__slide
+      position: absolute
+      left: 0
+      top: 0
+      right: 0
+      bottom: 0
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center center
+      animation-duration: 12s
+      animation-iteration-count: infinite
+      animation-fill-mode: forwards
+      animation-timing-function: ease
+
+    &__slide01
+      z-index: 2
+      animation-name: about-slide01
+      background-image: url('../images/gallery_about/slide01.jpg')
+
+    &__slide02
+      z-index: 1
+      animation-name: about-slide02
+      background-image: url('../images/gallery_about/slide02.jpg')
+
+    &__slide03
+      z-index: 1
+      animation-name: about-slide03
+      background-image: url('../images/gallery_about/slide03.jpg')
+
+  &__text
+    margin-top: -96px
+    padding: 40px $pd - 8 60px $pd
+    position: relative
+    z-index: 2
+    background: $color-white
+
+.about-videos
+  padding: 40px 0 72px
+
+  .head-num
+    display: none
+
+  &__item
+    margin: 60px 0 0
+    
+    &__video    
+      &__screen
+        width: 100%
+        height: auto
+        border: 0
+        background: $color-dark-blue
+
+    &__num
+      display: none
+
+    &__text
+      padding: 24px 0 0
+
+    &__button
+      padding: 32px 0 0
+
+
+.about-details
+  &__list
+    padding: 58px $pd 90px
+    background: $color-white
+
+  &__item
+    margin: 43px 0 0
+
+    &__icon
+      margin-bottom: 41px
+      background-position: left top
+      background-repeat: no-repeat
+      background-size: 100%
+
+    &__icon01
+      width: 74px
+      height: 100px
+      background-image: url('../images/about_icons/icon01.png')
+
+    &__icon02
+      width: 158px
+      height: 100px
+      background-image: url('../images/about_icons/icon02.png')
+
+    &__icon03
+      width: 95px
+      height: 100px
+      background-image: url('../images/about_icons/icon03.png')
+
+    &__icon04
+      width: 72px
+      height: 100px
+      background-image: url('../images/about_icons/icon04.png')
+
+    &__icon05
+      width: 107px
+      height: 100px
+      background-image: url('../images/about_icons/icon05.png')
+
+    &__icon06
+      width: 96px
+      height: 100px
+      background-image: url('../images/about_icons/icon06.png')
+
+    &__icon07
+      width: 122px
+      height: 100px
+      background-image: url('../images/about_icons/icon07.png')
+
+    &__icon08
+      width: 107px
+      height: 100px
+      background-image: url('../images/about_icons/icon08.png')
+
+    &__icon09
+      width: 100px
+      height: 100px
+      background-image: url('../images/about_icons/icon09.png')
+
+
+@media screen and (min-width: 480px)
+  $pd: 20px
+
+  .promo-about
+    background: $bg-color
+    padding-top: 100px
+
+    &__img
+      margin-left: -$pd*2
+      margin-right: -$pd*2
+    
+    &__text
+      padding-right: $pd
+
+  .about-videos
+    &__item
+      &__video
+        width: 75%
+        padding-right: 5px
+
+    .head02
+      width: 75%
+
+
+  .about-details
+    .content__wrapper
+      margin: 0 (-$pd/2)
+      padding: 0 ($pd*2 + $pd/2)
+
+    &__list
+      font-size: 0
+      line-height: 0
+
+      .head01
+        padding-left: $pd/2
+
+    &__item
+      display: inline-block
+      width: 50%
+      vertical-align: top
+      padding: 0 $pd/2
+      font-size: 16px
+      line-height: 28px
+
+
+@media screen and (min-width: 760px)
+  $pd: 20px
+
+  $default-font-size: 16px
+  $default-line-height: 28px
+
+  .promo-about
+    padding-top: 120px
+
+    &__text
+      padding-left: $pd*2
+      padding-right: $pd*2
+
+  .about-videos
+    padding-top: 50px
+    padding-bottom: 150px
+
+    .head02      
+      font-size: 32px
+      line-height: 46px
+
+      &-larger
+        font-size: 36px
+        line-height: 48px
+
+    &__item
+      margin-top: 100px
+
+  .about-details
+    &__list
+      padding: 50px $pd*2 171px
+
+    &__item
+      margin-top: 42px
+
+@media screen and (min-width: 1000px)
+  $pd: 20px
+
+  $default-font-size: 16px
+  $default-line-height: 28px
+
+  $min-wp-height: 640px
+  $max-wp-height: 720px
+
+  .content__border
+    .about &
+      overflow: hidden
+
+    .menu-active &
+      overflow: visible
+
+  .content-lines
+    position: relative
+
+    &__line
+      width: 1px
+      position: absolute
+      top: -150px
+      bottom: -10000px
+      z-index: 0
+      margin-left: -1px
+      background: #ecebe8
+
+      &:nth-child(1)
+        left: 12.5%
+
+      &:nth-child(2)
+        left: 25%
+
+      &:nth-child(3)
+        left: 37.5%
+
+      &:nth-child(4)
+        left: 50%
+
+      &:nth-child(5)
+        left: 62.5%
+
+      &:nth-child(6)
+        left: 75%
+
+      &:nth-child(7)
+        left: 87.5%
+
+  .promo-about
+    padding: 120px 0 12px
+
+    .head02
+      margin-top: 22px
+      padding-bottom: 12px
+
+    &__img
+      margin-left: -$pd*2
+      margin-right: -$pd*2
+
+    &__text
+      padding: 40px ($pd*2 + 7) 90px
+
+
+  .about-videos
+    padding: 0 0 202px
+
+    .content__wrapper
+      margin: 0 -$pd/2
+  
+    .head02    
+      width: 100%
+
+    &__item
+      font-size: 0
+      line-height: 0
+      margin-top: 150px
+
+      &-right
+        direction: rtl
+
+      &__col
+        display: inline-block
+        width: 50%
+        vertical-align: middle
+
+      &__video
+        width: 83.33%
+        padding-left: $pd/2
+        padding-right: $pd/2
+        position: relative
+        z-index: 3
+
+      &__text
+        display: inline-block
+        width: 50%
+        padding: 0 $pd/2
+        vertical-align: top
+        font-size: 16px
+        line-height: 28px
+        direction: ltr
+
+        &-pos
+          display: inline-block
+          margin-top: -10px
+          position: relative
+          z-index: 3
+
+  .about-details
+    position: relative
+    z-index: 3
+
+    .content__wrapper
+      margin: 0
+
+    .head01
+      font-size: 44px
+      line-height: 58px
+      padding-left: $pd
+      padding-bottom: 21px
+
+    &__list
+      margin: 0 -10px
+      padding: 86px 0 193px
+
+      &-pos
+        width: 87%
+        margin: 0 auto
+
+    &__item
+      width: 33.33%
+      padding: 0 $pd
+      margin-top: 65px
+
+  .footer
+    .about &
+      position: relative
+      z-index: 3
+
+
+@media screen and (min-width: 1320px)
+  .promo-about
+    padding: 130px 0 0
+    z-index: 3
+
+    .content__wrapper
+      padding: 0 $pd*2
+
+    .head02
+      margin-top: 28px
+      padding-bottom: 23px
+
+    &__img
+      min-height: 460px
+      margin-left: 0
+      margin-right: 0
+
+    &__text-pos
+      width: 83.33%
+      margin: 0 auto
+
+    &__text
+      margin-top: -103px
+      padding: 38px ($pd*2 + $pd/2) 92px
+      position: relative
+
+      &::before,
+      &::after
+        content: ''
+        width: 1px
+        display: block
+        position: absolute
+        top: 100%
+        bottom: -10000px
+        z-index: 1
+        background: #ecebe8
+
+      &::before
+        left: 0
+
+      &::after
+        right: 0
+
+  .about-videos
+    padding-bottom: 150px
+    z-index: 3
+
+    .content__wrapper
+      margin: 0
+
+    .head02
+      max-width: 86%
+      font-size: 36px
+      line-height: 48px
+      position: relative
+      z-index: 3
+
+    .head-num
+      display: block
+      position: absolute
+      top: -15px
+      left: -160px
+      z-index: 3
+
+    &__item
+      margin: 150px 0 50px
+
+      &__col
+        width: 33.33%
+        padding: 0
+        position: relative
+
+        &::before
+          content: ''
+          width: 1px
+          display: block
+          position: absolute
+          right: 20px
+          top: -1000px
+          bottom: -10000px
+          z-index: 1
+          background: #ecebe8
+
+          .about-videos__item-right &
+            left: 20px
+            right: initial
+
+          .menu-active &
+            display: none
+
+      &__video
+        width: 100%
+        padding: 0 20px 0 0
+
+        .about-videos__item-right &
+          padding: 0 0 0 20px
+
+      &__num
+        width: 16.67%
+        display: inline-block
+
+      &__text
+        padding: 0 0 0 35px
+        vertical-align: middle
+
+        .about-videos__item-right &
+          padding: 0 35px 0 0
+
+        &-pos
+          max-width: 612px
+          margin-top: -14px
+          position: relative
+          z-index: 3
+
+      &__button
+        padding-top: 40px
+
+  .about-details
+    &__list
+      padding: 137px 0 160px
+
+      &-pos
+        width: 79%
+
+    &__item
+      margin-bottom: 30px
+
+      &__content
+        max-width: 260px
+
+  .content-lines
+    &__block
+      position: relative
+      width: 83.33%
+      margin: 0 auto
+
+    &__line
+      &:nth-child(1)
+        left: 14.3%
+
+      &:nth-child(2)
+        left: 42.9%
+
+      &:nth-child(3)
+        left: 57.2%
+
+      &:nth-child(4)
+        left: 85.8%
+
+      &:nth-child(5),
+      &:nth-child(6),
+      &:nth-child(7)
+        display: none
+
+@media screen and (min-width: 1600px)
+  $pd: 30px
+
+  .promo-about
+    padding: 130px 0 0
+
+    .content__wrapper
+      padding: 0 $pd
+
+    .head02
+      margin-top: 28px
+      padding-bottom: 23px
+
+    &__img
+      min-height: 610px //huck
+      margin-left: 0
+      margin-right: 0
+
+    &__text-pos
+      width: 83.33%
+      margin: 0 auto
+
+    &__text
+      margin-top: -200px
+      padding: 38px ($pd*2 + $pd/2) 92px
+
+
+  .about-videos
+    padding-top: 100px
+    padding-bottom: 200px
+
+    .head02
+      max-width: 70%
+      padding-bottom: 12px
+
+    .head-num
+      left: -162px
+
+    &__item      
+      &__text-pos
+        max-width: 86%
+        margin-top: 47px
+
+        .about-videos__item-right &
+          padding-left: 5px
+
+
+  .about-details
+    .content__wrapper
+      margin: 0
+      padding: 0 $pd
+
+    .head01
+      font-size: 56px
+      line-height: 68px
+      padding-left: 15px
+      padding-bottom: 76px
+
+    &__list
+      margin: 0
+      padding: 184px 0 214px
+
+      &-pos
+        width: 66.67%
+      
+      &-shift
+        margin: 0 -15px
+
+    &__item
+      width: 37.5%
+      margin-top: 62px
+      padding: 0 15px
+
+      &-3
+        width: 25%
+
+      &__content
+        min-width: 250px
+
+      &__icon01
+        width: 84px
+        height: 115px
+
+      &__icon02
+        width: 179px
+        height: 115px
+
+      &__icon03
+        width: 110px
+        height: 115px
+
+      &__icon04
+        width: 83px
+        height: 114px
+
+      &__icon05
+        width: 122px
+        height: 115px
+
+      &__icon06
+        width: 110px
+        height: 114px
+
+      &__icon07
+        width: 140px
+        height: 115px
+
+      &__icon08
+        width: 123px
+        height: 115px
+
+      &__icon09
+        width: 115px
+        height: 115px
+
+@media screen and (min-width: 1900px)
+  $pd: 65px
+
+  .promo-about
+    padding: 140px 0 0
+
+    .content__wrapper
+      padding: 0 $pd
+
+    .head02
+      margin-top: 28px
+      padding-bottom: 23px
+
+    &__img
+      min-height: 773px //huck
+
+    &__text-pos
+      width: 83.33%
+      margin: 0 auto
+
+    &__text
+      margin-top: -162px
+      padding: 86px 103px 142px
+
+  .about-details
+    &__list
+      &-shift
+        margin: 0 15px
+

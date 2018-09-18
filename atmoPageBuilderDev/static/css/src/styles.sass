@@ -1,0 +1,844 @@
+@import icons
+@import _mixins
+@import variables
+
+* 
+  box-sizing: border-box
+
+html,
+body
+  padding: 0
+  margin: 0
+  min-width: 320px
+  height: 100%
+  color: $color-gray
+  font-style: normal
+  background: $color-white
+  font-size: $default-font-size
+  line-height: $default-line-height
+  font-family: 'Open Sans', sans-serif
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+
+body
+  overflow: hidden
+
+  &.page-loaded
+    overflow: visible
+    overflow-x: hidden
+
+a
+  color: #282828
+  text-decoration: none
+  outline: none
+  border: 0
+  -o-transition: color .3s ease
+  -moz-transition: color .3s ease
+  -webkit-transition: color .3s ease
+  transition: color .3s ease
+
+  &:hover
+    color: $color-blue
+
+.default-list
+  margin: 0
+  padding: 0
+  list-style-type: none
+
+  li
+    margin: 0
+    padding: 0
+
+.nowrap
+  white-space: nowrap
+
+.head-num
+  color: $color-dark
+  font-size: 105px
+  line-height: 120px
+  font-family: 'PT Serif', serif
+
+.head01
+  color: $color-dark
+  font-size: 32px
+  line-height: 46px
+  font-family: 'PT Serif', serif
+
+.head02
+  color: $color-dark
+  font-size: 24px
+  line-height: 36px
+  font-family: 'PT Serif', serif
+  padding-bottom: 12px
+
+.head03
+  color: $color-blue
+  font-size: 16px
+  line-height: 28px
+  font-weight: 700
+  padding-bottom: 5px
+
+.text-blue
+  color: $color-blue
+
+  &:hover
+    color: $color-dark
+
+.text-gray
+  color: $color-gray
+
+.text-green
+  color: $color-green
+
+.text-white
+  color: $color-white
+
+.link-underline-blue
+  position: relative
+  color: $color-blue
+  transition: color .3s ease
+
+  &::after
+    content: ''
+    display: block
+    position: absolute
+    height: 1px
+    left: 0
+    right: 0
+    bottom: 1px
+    opacity: 1
+    background: $color-blue
+    transition: opacity .3s ease
+
+  &:hover
+    color: #66becc
+
+    &::after
+      opacity: 0
+
+.btn,
+.btn-circle
+  display: inline-block
+  height: 50px
+  margin: 0
+  padding: 0 10px
+  overflow: hidden
+  position: relative
+  color: $color-dark
+  font-size: $default-font-size
+  line-height: 48px
+  text-align: center
+  white-space: nowrap
+  cursor: pointer
+  border-radius: 25px
+  +background-gradient(top, #5fc0cc, #1caac0)
+  -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%)
+
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    left: 2px
+    top: 2px
+    right: 2px
+    bottom: 2px
+    z-index: 2
+    border-radius: 25px
+    background: $bg-color
+
+  &.btn-white::before
+    background: $color-white
+
+  &::after
+    content: ''
+    display: block
+    width: 62px
+    height: 50px
+    position: absolute
+    left: -62px
+    top: 0
+    z-index: 3
+    transition: .5s left ease .2s
+    +transform(skew(-45deg))
+    +transform-origin(top left)
+    +background-gradient(top, #5fc0cc, #1caac0)
+
+  &:hover
+    color: $color-blue
+    
+.btn
+  width: 260px
+  transition: .28s color ease .2s
+
+  &:hover
+    &::after
+      left: 322px
+
+  &__text
+    position: relative
+    z-index: 4
+
+
+.btn-circle
+  width: 50px
+  position: absolute
+  left: 0
+  top: 0
+
+  &::after
+    transition: .43s left ease .2s
+
+  &-white::before
+    background: $color-white
+
+  &__icon
+    display: inline-block
+    width: 0
+    height: 0
+    position: relative
+    left: 1px
+    top: 2px
+    z-index: 4
+    border-top: 7px solid transparent
+    border-bottom: 7px solid transparent
+    border-left-width: 10px
+    border-left-style: solid
+    border-left-color: $color-dark
+    transition: .2s border-left-color ease .3s
+
+.btn-link
+  position: relative
+  text-decoration: none
+  outline: none
+  cursor: pointer
+  
+  &__wrapper
+    height: 50px
+  
+  &__text
+    position: absolute
+    left: 65px
+    top: 10px
+    white-space: nowrap
+    transition: .3s color ease
+    font-size: $default-font-size
+    line-height: $default-line-height
+
+    .btn-link:hover &
+      color: $color-blue
+
+  &:hover
+    .btn-circle::after
+      left: 112px
+
+    .btn-circle__icon
+      border-left-color: $color-blue
+
+.content__border
+  background: $bg-color
+  opacity: 0
+  height: 0
+  overflow: hidden
+
+  .page-loaded &
+    opacity: 1
+    height: auto
+    overflow: visible
+
+
+.content__wrapper
+  padding: 0 $pd
+
+.animated-screen
+  position: relative
+  overflow: hidden
+
+  &::before
+    content: ''
+    display: block
+    position: absolute
+    left: -30px
+    top: -30px
+    right: -30px
+    bottom: 0
+    z-index: 99
+    background: $color-white
+    +translate(0, 0)
+    +transition(transform, .3s, ease)
+
+    .page-loaded &
+      +translate(100%, 0)
+
+  &::after
+    content: ''
+    display: block
+    position: absolute
+    left: -30px
+    top: -50px
+    right: -30px
+    bottom: 0
+    z-index: 98
+    background: $bg-color
+    +translate(0, 0)
+    +transition(transform, .3s, ease, .3s)
+
+    .page-loaded &
+      +translate(100%, 0)
+
+.navigation
+  position: absolute
+  left: 0
+  top: 20px
+  right: 0
+  z-index: 30
+  font-size: 0
+  line-height: 0
+  +transition(transform, .3s, cubic-bezier(0.39, 0.575, 0.565, 1))
+
+  &-fixed
+    display: none
+    position: fixed
+    z-index: 100
+    padding-top: 15px
+    padding-bottom: 15px
+    background: $color-white
+
+    .nav-up &
+      transform: translateY(-100px)
+
+    .nav-down &
+      transform: translateY(-20px)
+
+  &__content
+    padding: 0 $pd
+    position: relative
+
+  &__logo
+    display: inline-block
+    width: 188px
+    height: 46px
+    position: relative
+    z-index: 5
+    cursor: pointer
+    text-decoration: none
+    outline: none
+    vertical-align: top
+    background-repeat: no-repeat
+    background-position: left top
+    background-size: 100%
+    background-image: url('../images/logo_small.png')
+
+
+  &__list
+    display: none
+
+  &__menu-icon
+    float: right
+    margin: 19px 0 0
+    position: relative
+    z-index: 1
+
+    &__link
+      font-size: 0
+      line-height: 0
+      display: inline-block
+      width: 20px
+      height: 22px
+      margin-top: -9px
+
+      &__burger
+        display: inline-block
+        position: relative
+        z-index: 1
+        width: 20px
+        height: 3px
+        margin-top: 9px
+        background: #1d1d1b
+
+        &::before,
+        &::after
+          content: ''
+          position: absolute
+          left: 0
+          z-index: 1
+          width: 20px
+          height: 3px
+          background: #1d1d1b
+
+        &::before
+          top: -9px
+
+        &::after
+          top: 9px
+
+.gallery
+  position: relative
+
+  &__cover
+    position: absolute
+    left: -30px
+    top: -30px
+    right: -30px
+    bottom: 0
+    z-index: 6
+    background: $color-white
+    +translate(-100%, 0)
+    +transition(transform, .9s, ease-out, .1s)
+
+    .slide-change &
+      +translate(150%, 0)
+
+    &::after
+      content: ''
+      display: block
+      width: 100%
+      position: absolute
+      left: 50%
+      top: -30px
+      bottom: 0
+      z-index: 7
+      background: $bg-color
+      +translate(-100%, 0)
+
+
+  &__navigation
+    &-prev,
+    &-next
+      +transition(background, .3s, ease-out)
+
+    &-prev
+      &::before
+        +rotate(180)
+        +transform-origin(center center)
+
+  &__slide
+    position: absolute
+    left: 0
+    top: 0
+    right: 0
+    bottom: 0
+
+    &.gallery__slide01
+      z-index: 3
+
+    &.gallery__slide02
+      z-index: 2
+
+    &.gallery__slide03
+      z-index: 1
+
+    &.slide-index
+      z-index: 4
+
+    &__person
+      position: relative
+      text-align: center
+      font-size: 0
+      line-height: 0
+
+      &::before,
+      &::after
+        content: ''
+
+      &__back,
+      &::before,
+      &::after
+        position: absolute
+        z-index: 2
+        opacity: 0
+        transition: opacity .01s linear
+
+        .slide-in &
+          transition-delay: .4s
+          opacity: 1
+
+        .slide-out &
+          transition-delay: .7s
+          opacity: 0
+      
+      &::before
+        left: 0
+        top: 54%
+        right: 0
+        bottom: 0
+        background: $color-light-gray
+
+
+      &::after,
+      &__back
+        left: $pd*2
+        top: 40.6%
+        right: 0
+        bottom: 13%
+
+        .gallery__slide01 &
+          background-repeat: no-repeat
+          background-position: center top
+          background-image: url('../images/gallery_main/back01.jpg')
+          background-size: cover
+
+        .gallery__slide02 &
+          background-repeat: no-repeat
+          background-position: center top
+          background-image: url('../images/gallery_main/back02_2.jpg')
+          background-size: cover
+
+        .gallery__slide03 &
+          background-repeat: no-repeat
+          background-position: center top
+          background-image: url('../images/gallery_main/back03.jpg')
+          background-size: cover
+
+      &__back
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)
+        -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)
+        opacity: 1
+
+        .slide-in &
+          transition: clip-path .3s ease 1s, -webkit-clip-path .3s ease 1s, opacity .1s ease 1.6s
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+          -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+          opacity: 0
+
+        .slide-out &
+          +transition(all, .3s, ease, .2s)
+          -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%)
+          clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%)
+
+      &::after
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)
+        -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)
+
+        .slide-in &
+          +transition(clip-path, .3s, ease, 1.2s)
+          +transition(-webkit-clip-path, .3s, ease, 1.2s)
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+          -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+
+        .slide-out &
+          +transition(all, .3s, ease, .1s)
+          -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%)
+          clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%)
+          //+transition(opacity, .1s, ease, .1s)
+          //opacity: 0
+
+      &__back
+        background-image: none !important
+        background-color: $color-dark-blue
+
+      &__img
+        width: 100%
+        min-height: 476px
+        max-height: 560px
+        display: inline-block
+        padding-top: 12px
+        margin-top: 60px
+        position: relative
+        z-index: 3
+        overflow: hidden
+        background-position: center bottom
+        background-repeat: no-repeat
+        background-size: contain
+        opacity: 0
+        transition: opacity .01s linear
+
+        .gallery__slide02 &
+          background-size: cover
+
+        .slide-in &
+          transition-delay: .4s
+          opacity: 1
+
+        .slide-out &
+          transition-delay: .5s
+          opacity: 0
+
+        img
+          max-height: 100%
+
+          .gallery__slide02 &
+            margin-left: -25px
+
+          .gallery__slide03 &
+            margin-left: -15px
+
+        .gallery__slide01 &
+          //background-image: url('../images/gallery_main/person01.png')
+
+        .gallery__slide02 &
+          //background-image: url('../images/gallery_main/person02.png')
+
+        .gallery__slide03 &
+          //background-image: url('../images/gallery_main/person03.png')
+
+
+    &__content
+      opacity: 0
+      padding: 30px 0 0
+      transform: translateY(-10px)
+      transition: opacity .33s ease-in .3s, transform .5s ease .3s
+
+      .slide-in &
+        opacity: 1
+        transform: translateY(0)
+        transition-delay: .7s
+
+      .slide-out &
+        transition-delay: .1s
+        opacity: 0
+
+    &__name
+      padding-top: 13px
+
+    &__buttons
+      padding: 33px 0 0
+      font-size: 0
+      line-height: 0
+
+    &__button-video
+      margin-top: 12px
+
+
+@keyframes about-main-logo-circle01
+  0%
+    +rotate(0)
+  99%
+    +rotate(360)
+  100%
+    +rotate(360)
+
+@keyframes about-main-logo-circle02
+  0%
+    +rotate(0)
+  99%
+    +rotate(-360)
+  100%
+    +rotate(-360)
+
+
+.about-main
+  padding: 80px $pd 0
+
+  &__dots
+    height: 250px
+    margin: 0 $pd
+    line-height: 250px
+    text-align: center
+    background-position: left top
+    background-repeat: repeat
+    background-image: url('../images/dots.png')
+    background-size: contain
+  
+  &__logo
+    display: inline-block
+    width: 215px
+    height: 214px
+    position: relative
+    vertical-align: middle
+
+    &__circle01,
+    &__circle02,
+    &__circle03,
+    &__circle04
+      position: absolute
+      animation-duration: 15s
+      animation-iteration-count: infinite
+      animation-timing-function: cubic-bezier(1, 0, 0, 1)
+
+    &__circle01
+      left: 0
+      top: 0
+      animation-name: about-main-logo-circle01
+
+    &__circle02
+      left: 19px
+      top: 19px
+      animation-name: about-main-logo-circle02
+
+    &__circle03
+      left: 38px
+      top: 38px
+      animation-name: about-main-logo-circle01
+
+    &__circle04
+      left: 57px
+      top: 57px
+      animation-name: about-main-logo-circle02
+
+  &__text
+    padding: 36px 0 0
+
+    .head02
+      margin-top: 11px
+
+  &__button
+    padding: 34px 0 0
+
+
+.programs
+  padding: 38px 0 92px
+
+  &__item
+    margin: 52px 0 0
+
+    &__link
+      font-size: 0
+      line-height: 0
+
+    &__title
+      @extend .head02
+      @extend a
+      padding-bottom: 5px
+
+      .programs__item__link:hover &
+        @extend a:hover
+
+    &__content,
+    .fitness-programs__item__img-pos
+      opacity: 0
+      clip-path: polygon(0 0,0 0,0 100%,0 100%)
+      transition: opacity .8s ease 112ms, clip-path 1.1s cubic-bezier(.19,1,.22,1), -webkit-clip-path 1.1s cubic-bezier(.19,1,.22,1)
+
+      &.is-animated
+        opacity: 1
+        clip-path: polygon(0 0,100% 0,100% 100%,0 100%)
+
+    &__img
+      margin: 0 0 33px
+      line-height: 0
+      font-size: 0
+
+      img
+        width: 100%
+        height: auto
+
+      &-large
+        display: none
+
+.parallax-mirror
+  z-index: 2 !important
+
+.promo-main
+  position: relative
+
+  .head02
+    margin-top: 22px
+    
+  &__line
+    display: none
+    
+  &__img
+    height: 400px
+    position: relative
+    z-index: 1
+    background-position: center
+    background-repeat: no-repeat
+    background-size: cover
+    background-image: url('../images/picture_main_small.jpg')
+
+    &__src
+      display: none
+
+  &__text
+    position: relative
+    z-index: 2
+    margin: -100px 0 0
+    padding: 50px 0 62px
+    background: #fff
+
+.footer
+  font-size: 15px
+  line-height: 27px
+  color: $color-gray
+  text-align: center
+
+  a
+    color: $color-white
+
+    &:hover
+      color: $color-blue
+
+.footer-top
+  padding: 42px 0 52px
+  background: $bg-dark
+
+  &__join
+    margin: 60px 0 79px
+    position: relative
+    font-size: 36px
+    line-height: 68px
+    font-family: 'PT Serif', serif
+
+    a
+      transition-delay: .07s
+      transition-duration: .33s
+
+    &__line-top,
+    &__line-bottom
+      width: 180px
+      height: 1px
+      margin: 0 0 0 -90px
+      position: absolute
+      left: 50%
+      z-index: 1
+      background: $color-gray
+
+      &::before
+        content: ''
+        display: block
+        width: 0
+        height: 1px
+        margin: 0 auto
+        opacity: 0.33
+        background: $color-white
+        transition: width .4s ease, opacity .4s ease-out
+
+        .footer-top__join:hover &
+          opacity: 1
+          width: 100%
+
+
+    &__line-top
+      top: -28px
+
+    &__line-bottom
+      bottom: -36px
+
+  &__phone-large
+    display: none
+
+  &__socials-large
+    display: none
+
+
+.footer-bottom
+  padding: 43px 0 42px
+  background: #0c0c0c
+  font-size: 0
+  line-height: 0
+
+  &__rights,
+  &__documents__forms,
+  &__documents__rules
+    font-size: 15px
+    line-height: 27px
+
+  &__documents
+    margin: 27px 0 0
+
+@media screen and (min-width: 1000px)
+  .footer-top:before
+    content: ''
+    width: 100%
+    height: 50px
+    display: block
+    z-index: 2
+    background: #1b1f2c
+    transition: 0.4s
+    top: 0px
+    position: absolute
+  
+@media screen and (min-width: 1000px)
+  .footer-top:hover::before 
+    top: -50px
+

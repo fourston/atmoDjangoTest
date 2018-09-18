@@ -1,0 +1,539 @@
+@import _mixins
+@import variables
+
+.popup-active
+  overflow: hidden !important
+
+.popup
+  display: none
+  position: fixed
+  height: 100%
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  z-index: 999
+  overflow: auto
+  overflow-y: auto
+  -webkit-overflow-scrolling: touch
+  background: rgba(40, 40, 40, .75)
+
+  &__content
+    height: 100%
+    min-height: 618px
+
+    .popup-register &
+      min-height: 708px
+  
+    .popup-buy &
+      min-height: 632px
+  
+  &__center
+    position: relative
+    min-width: 320px
+    left: 0
+    top: 50%
+    z-index: 1000
+
+  &__feedback
+    position: absolute
+    height: 618px
+    left: 20px
+    right: 20px
+    top: 0
+    margin-top: -313px
+
+    .popup-register &
+      min-height: 708px
+      margin-top: -346px
+
+    .popup-buy &
+      min-height: 632px
+      margin-top: -326px
+
+    &__content
+      min-height: 618px
+      position: relative
+      overflow: hidden
+
+      .popup-register &
+        min-height: 708px
+      
+      .popup-buy &
+        min-height: 632px
+      
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0
+        z-index: 1
+        background: $bg-color
+        -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)
+
+        .popup-animated  &
+          +transition(clip-path, .33s, ease, .25s)
+          -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+
+        .popup-closed  &
+          +transition(all, .3s, ease, .85s)
+          -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%)
+          clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%)
+
+      &__cover
+        display: block
+        position: absolute
+        left: -1px
+        top: 0
+        right: 0
+        bottom: 0
+        z-index: 6
+        opacity: 1
+        background: $color-white
+        +translate(-100%, 0)
+        transition: transform .5s ease .1s
+
+        .popup-cover &
+          +translate(100%, 0)
+
+  &__close
+    width: 44px
+    height: 44px
+    position: absolute
+    right: $pd/2
+    top: $pd/2
+    z-index: 10
+    cursor: pointer
+    outline: none
+    font-size: 0
+    line-height: 0
+
+    &__icon
+      display: inline-block
+      width: 16px
+      height: 16px
+      margin: 14px
+      position: relative
+      cursor: pointer
+      background: url('../images/icons/icon_close.png') no-repeat center center
+      background-size: 100%
+
+      &:before
+        display: inline-block
+        content: ''
+        width: 44px
+        height: 44px
+        position: absolute
+        left: -14px
+        top: -14px
+        opacity: .1
+        background: url('../images/icons/icon_close_circle02.png') no-repeat center center
+        background-size: 100%
+        transition: opacity .35s ease
+
+        .popup__close:hover &
+          opacity: .5
+
+.feedback__form
+  width: 100%
+  display: inline-block
+  vertical-align: middle
+  padding: $pd
+  position: relative
+  z-index: 3
+  text-align: left
+  font-size: $default-font-size
+  line-height: $default-line-height
+
+  &__img
+    height: 130px
+    margin: (-$pd) (-$pd) 0
+    position: relative
+    z-index: 5
+
+    &::before
+      content: ''
+      display: block
+      position: absolute
+      z-index: 4
+      left: 0
+      top: 0
+      right: 0
+      bottom: 1px
+      background: $color-dark-blue
+      -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)
+      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)
+
+      .popup-animated &
+        +transition(all, .33s, ease, .5s)
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+
+      .popup-closed &
+        +transition(all, .3s, ease, .55s)
+        -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%)
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%)
+
+    &::after
+      content: ''
+      display: block
+      position: absolute
+      z-index: 6
+      left: 0
+      top: 0
+      right: 0
+      bottom: 0
+      background-repeat: no-repeat
+      background-position: -66px center
+      -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)
+      clip-path: polygon(0 0, 0 0, 0 100%, 0 100%)
+
+      .popup-join &
+        background-size: 200%
+        background-image: url('../images/popup/popup01_small.jpg')
+
+      .popup-buy &
+        background-size: 180%
+        background-image: url('../images/popup/popup02_small.jpg')
+
+      .popup-register &
+        background-size: cover
+        background-image: url('../images/popup/popup03_small.jpg')
+
+      .popup-animated  &
+        +transition(all, .33s, ease, .9s)
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+
+      .popup-closed  &
+        +transition(all, .3s, ease, .25s)
+        -webkit-clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%)
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%)
+
+
+  &__text
+    line-height: 28px
+    padding: 28px 0 12px
+
+    .head01
+      padding-bottom: 14px
+
+  &__button
+    padding: 39px 0 0
+
+    .btn
+      width: 100%
+      max-width: 260px
+
+  &-initial
+    position: relative
+    z-index: 4
+    opacity: 1
+
+    .popup-sended &
+      position: absolute
+      left: -5000px
+      opacity: 0
+
+  &-sended
+    z-index: 3
+    position: absolute
+    left: 0
+    top: 0
+    right: 0
+    opacity: 0
+
+    .popup-sended &
+      z-index: 5
+      position: relative
+      opacity: 1
+
+  &__input
+    width: 100%
+    margin: 0 auto
+    padding: 10px 0 0
+    position: relative
+      
+    input
+      width: 100%
+      height: 50px
+      margin: 0
+      padding: 0 $pd
+      position: relative
+      z-index: 1
+      outline: none
+      font-size: 16px
+      line-height: 50px
+      color: $color-gray
+      font-family: 'Open Sans', sans-serif
+      border-width: 1px
+      border-style: solid
+      border-color: $color-white
+      transition: border-color .33s ease-in .1s
+
+      &:focus
+        border-color: $color-white
+
+      &::-webkit-input-placeholder,
+      &::placeholder
+        color: $color-gray
+
+      .phone-is-failed &,
+      .name-is-failed &
+        border-color: rgba(204, 51, 102, .6)
+
+
+.feedback-more__button
+  padding-top: 13px
+
+  .feedback-more
+    width: 100%
+    max-width: 260px
+    padding: 0
+      
+.elem-animated
+  opacity: 0
+  transform: translateY(-10px)
+
+  .menu-active &,
+  .popup-animated &
+    transition: opacity .33s ease-in 1s, transform .33s ease 1s
+    opacity: 1
+    transform: translateY(0)
+
+  .menu-out &,
+  .popup-closed &
+    transition: opacity .33s ease-in .25s
+    opacity: 0
+
+
+@media screen and (min-width: 360px)
+  .feedback
+    &__form
+      &__img
+        height: 170px
+
+@media screen and (min-width: 420px)
+  .feedback
+    &__form
+      &__img
+        height: 190px
+
+@media screen and (min-width: 480px)
+  .popup
+    &__close
+      width: 50px
+      height: 50px
+      right: $pd
+      top: $pd
+
+      &__icon
+        width: 18px
+        height: 18px
+        margin: 16px
+
+        &:before
+          width: 50px
+          height: 50px
+          left: -16px
+          top: -16px
+
+    &__feedback
+      left: $pd*2
+      right: $pd*2
+
+  .feedback
+    &__form
+      padding: $pd $pd*2
+
+      .popup-register &
+        padding-bottom: 50px
+
+      .popup-buy &
+        padding-bottom: 30px
+
+      &__img
+        margin-left: -$pd*2
+        margin-right: -$pd*2
+
+        &::after
+          .popup-join &
+            background-size: 150%
+
+          .popup-buy &
+            background-size: cover
+            background-position: center center
+
+
+@media screen and (min-width: 760px)
+  .feedback
+    &__form
+      &__img
+        height: 220px
+        
+        &::after
+          background-position: center center
+
+          .popup-join &
+            background-size: cover
+            background-image: url('../images/popup/popup01.jpg')
+
+          .popup-buy &
+            background-image: url('../images/popup/popup02.jpg')
+
+          .popup-register &
+            background-image: url('../images/popup/popup03.jpg')
+
+      &__text
+        padding: 48px 0 12px
+
+        .head01
+          font-size: 44px
+          line-height: 58px
+
+      &__fields
+        font-size: 0
+        line-height: 0
+        margin: 0 (-$pd/2)
+
+      &__phone
+        width: 50%
+        display: inline-block
+        vertical-align: top
+        padding: 0 $pd/2
+
+      &__name
+        width: 50%
+        display: inline-block
+        vertical-align: top
+        padding: 0 $pd/2
+
+      &__button
+        padding-top: 40px
+
+
+@media screen and (min-width: 1000px)
+  .popup
+    &__content
+      min-height: 580px
+
+    &__feedback
+      height: 580px
+      margin-top: -293px
+
+      &__content
+        width: 83.33%
+        max-width: 1130px
+        min-height: 580px
+        margin: 0 auto
+        position: relative
+
+
+@media screen and (min-width: 1320px)
+  .popup
+    &__feedback
+      left: 60px
+      right: 60px
+
+    &__content
+      .popup-register &,
+      .popup-buy &
+        min-height: 614px
+
+    &__feedback
+      .popup-register &,
+      .popup-buy &
+        height: 614px
+        margin-top: -330px
+
+      &__content
+        .popup-register &,
+        .popup-buy &
+          min-height: 614px
+
+
+  .feedback
+    &__form
+      padding-left: 0
+      padding-right: 0
+
+      &__content
+        width: 80%
+        margin: 0 auto
+      
+      &__img
+        margin-left: 0
+        margin-right: 0
+
+      &__text
+        margin: 0 -30px
+
+        &__line
+          display: inline
+
+      &__fields
+        margin: 0 -45px
+
+      &__phone
+        width: 37.5%
+        padding: 0 15px
+
+      &__name
+        width: 62.5%
+        padding: 0 15px
+
+      &__button
+        margin: 0 -30px
+
+
+@media screen and (min-width: 1900px)
+  .popup
+    &__content
+      min-height: 760px
+
+      .popup-buy &,
+      .popup-register &
+        min-height: 760px
+
+    &__feedback
+      height: 760px
+      margin-top: -380px
+
+      .popup-buy &,
+      .popup-register &
+        height: 760px
+        margin-top: -380px
+
+      &__content
+        min-height: 760px
+
+        .popup-buy &,
+        .popup-register &
+          min-height: 760px
+
+  .feedback
+    &__form      
+      &__img
+        height: 280px
+
+      &__text
+        padding: 87px 0 12px
+        margin: 0 -12px
+
+        .head01
+          font-size: 56px
+          line-height: 68px
+          padding-bottom: 25px
+      
+      &__fields
+        margin: 0 -27px
+
+      &__button
+        padding-top: 50px
+        margin: 0 -12px
+

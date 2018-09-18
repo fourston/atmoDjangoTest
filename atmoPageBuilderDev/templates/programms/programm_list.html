@@ -1,0 +1,18 @@
+{% extends 'programms/base.html' %}
+
+{% block content %}
+   <div class="small-container">
+       {% for programm in programms %}
+           <div class="programm__preview">
+               <img src="{{ programm.main_image.url }}" />
+               <div class="programm__title">{{ programm.title }}</div>
+               <div class="programm__description"> {{ programm.text }} </div>
+               <a class="detail__programm-btn btn" href="{% url 'programm_detail' pk=programm.pk %}"><span class="btn__text">Читать полностью</span></a>
+           </div>
+       {% endfor %}
+   </div>
+{% endblock %}
+
+
+
+

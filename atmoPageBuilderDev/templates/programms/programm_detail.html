@@ -1,0 +1,12 @@
+{% extends 'programms/base.html' %}
+
+{% block content %}
+        <img class="programm__detail-img" src="{{ programm.main_image.url }}" />
+    <div class="small-container programm__detail">
+        <div class="programm__detail-text">
+            <div class="programm__title">{{ programm.title }}</div>
+            <div class="programm__description">{{ programm.text }}</div>
+        </div>
+    </div>
+
+{% endblock %}

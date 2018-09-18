@@ -1,0 +1,119 @@
+/*** tests ** */
+.overlay_test {
+  height: 10000px; }
+  .overlay_test.main320 {
+    background: #ff0000 url("../images/makets/main320.jpg") no-repeat center 0; }
+  .overlay_test.main480 {
+    background: #ff0000 url("../images/makets/main480.jpg") no-repeat center 0; }
+  .overlay_test.main760 {
+    background: #ff0000 url("../images/makets/main760.jpg") no-repeat center -65px; }
+
+.overlay_test.main1000 {
+  background: #ff0000 url("../images/makets/main1000.png") no-repeat center -60px; }
+
+.overlay_test.main1320 {
+  background: #ff0000 url("../images/makets/main1320.jpg") no-repeat center 0; }
+
+.overlay_test.main1600 {
+  background: #ff0000 url("../images/makets/main1600.jpg") no-repeat center -30px; }
+
+.overlay_test.main1900 {
+  background: #ff0000 url("../images/makets/main1900.jpg") no-repeat center -30px; }
+
+.overlay_test.person01 {
+  background: #ff0000 url("../images/makets/person01.jpg") no-repeat center -30px; }
+
+.overlay_test.person02 {
+  background: #ff0000 url("../images/makets/person02.jpg") no-repeat center -30px; }
+
+.overlay_test.person03 {
+  background: #ff0000 url("../images/makets/person03.jpg") no-repeat center -30px; }
+
+.overlay_test.menu320 {
+  background: #ff0000 url("../images/makets/menu320.jpg") no-repeat center 0; }
+
+.overlay_test.menu480 {
+  background: #ff0000 url("../images/makets/menu480.jpg") no-repeat center 0; }
+
+.overlay_test.menu760 {
+  background: #ff0000 url("../images/makets/menu760.jpg") no-repeat center 0; }
+
+.overlay_test.menu1320 {
+  background: #ff0000 url("../images/makets/menu1320.jpg") no-repeat center 0; }
+
+.overlay_test.about320 {
+  background: #ff0000 url("../images/makets/about320.jpg") no-repeat center 0; }
+
+.overlay_test.about760 {
+  background: #ff0000 url("../images/makets/about760.jpg") no-repeat center 0; }
+
+.overlay_test.about1000 {
+  background: #ff0000 url("../images/makets/about1000.jpg") no-repeat center 0; }
+
+.overlay_test.about1320 {
+  background: #ff0000 url("../images/makets/about1320.jpg") no-repeat center -27px; }
+
+.overlay_test.about1900 {
+  background: #ff0000 url("../images/makets/about1900.jpg") no-repeat center -37px; }
+
+.overlay_test.menu_open320 {
+  background: #ff0000 url("../images/makets/menu_open320.jpg") no-repeat 0 -20px; }
+.overlay_test.menu_open480 {
+  background: #ff0000 url("../images/makets/menu_open480.jpg") no-repeat 0 -20px; }
+.overlay_test.menu_open760 {
+  background: #ff0000 url("../images/makets/menu_open760.jpg") no-repeat 0 -29px; }
+.overlay_test.menu_open1000 {
+  background: #ff0000 url("../images/makets/menu_open1000.jpg") no-repeat 0 -10px; }
+.overlay_test.menu_open1320 {
+  background: #ff0000 url("../images/makets/menu_open1320.jpg") no-repeat 0 -20px; }
+.overlay_test.menu_open1600 {
+  background: #ff0000 url("../images/makets/menu_open1600.jpg") no-repeat 0 -30px; }
+.overlay_test.menu_open1900 {
+  background: #ff0000 url("../images/makets/menu_open1900.jpg") no-repeat 0 -20px; }
+
+.overlay_test.feedback320 {
+  background: #ff0000 url("../images/makets/feedback320.jpg") no-repeat center 20px; }
+
+.overlay_test.feedback760 {
+  background: #ff0000 url("../images/makets/feedback760.jpg") no-repeat center 170px; }
+
+.overlay_test.feedback1320 {
+  background: #ff0000 url("../images/makets/feedback1320.jpg") no-repeat center 404px; }
+
+.overlay_test.feedback1900 {
+  background: #ff0000 url("../images/makets/feedback1900.jpg") no-repeat center 153px; }
+
+.overlay_test.popup_360 {
+  background: #ff0000 url("../images/makets/popup_360.jpg") no-repeat center 15px; }
+  .overlay_test.popup_360 .popup {
+    opacity: 0.5; }
+  .overlay_test.popup_360 header,
+  .overlay_test.popup_360 section,
+  .overlay_test.popup_360 footer {
+    opacity: 0; }
+
+.overlay_test.popup_540 {
+  background: #ff0000 url("../images/makets/popup_540.jpg") no-repeat center -164px; }
+  .overlay_test.popup_540 .popup {
+    opacity: 0.5; }
+  .overlay_test.popup_540 header,
+  .overlay_test.popup_540 section,
+  .overlay_test.popup_540 footer {
+    opacity: 0; }
+
+.overlay_test.popup_1900 {
+  background: #ff0000 url("../images/makets/popup_1900.jpg") no-repeat center -231px; }
+  .overlay_test.popup_1900 .popup {
+    opacity: 0.5; }
+  .overlay_test.popup_1900 header,
+  .overlay_test.popup_1900 section,
+  .overlay_test.popup_1900 footer {
+    opacity: 0; }
+
+.overlay_test header,
+.overlay_test section,
+.overlay_test footer,
+.overlay_test .content__border {
+  opacity: 0.5; }
+
+/*# sourceMappingURL=maket-test.css.map */

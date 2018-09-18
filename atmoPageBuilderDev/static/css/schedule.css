@@ -1,0 +1,11 @@
+.schedule-content{
+	min-height: 500px;
+	padding-top: 150px;
+}
+.schedule-table{
+  padding-top: 20px;
+  padding-bottom: 100px;
+}
+.fitness-widget .fitness-widget-body{
+	padding: 0 !important;
+}

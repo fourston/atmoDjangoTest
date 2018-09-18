@@ -1,0 +1,420 @@
+@import _mixins
+@import variables
+
+// PRICE
+.need-to-hide
+  opacity: 0
+  +transition(opacity, .7s, ease, .5s)
+
+  .page-loaded &
+    opacity: 1
+
+.promo-price
+  padding-top: 90px
+
+  &.need-to-hide
+    opacity: 1
+
+  &__img
+    min-height: 320px
+    background-position: left top
+    background-repeat: no-repeat
+    background-size: cover
+    background-image: url('../images/picture_price_small.jpg')
+
+  &__text
+    padding-top: 40px
+
+    .head01
+      padding-bottom: 14px
+
+.price-list
+  padding-top: 20px
+
+  .btn-white
+    width: 140px
+
+  &__item
+    padding: 60px 0 62px
+    margin-top: 20px
+    background: $color-white
+
+    &__icon
+      width: 44px
+      height: 30px
+      margin: -9px 0 17px -3px
+      background: url('../images/icons/icon_price.png') no-repeat center center
+      background-size: 100%
+
+    &__title
+      padding-bottom: 7px
+      color: $color-dark
+      font-size: 44px
+      line-height: 58px
+      font-family: 'PT Serif', serif
+
+    &__description
+      list-style-type: none
+      padding: 0 0 18px
+      margin: 0
+
+      li
+        padding-top: 12px
+
+    &__button
+      margin-top: 19px
+
+
+.price-info
+  padding: 44px 0 62px
+  text-align: center
+
+  &__phone,
+  &__email
+    color: $color-dark
+    font-size: 24px
+    line-height: 36px
+    font-family: 'PT Serif', serif
+
+  &__phone
+    margin-top: 12px
+    white-space: nowrap
+
+
+@media screen and (min-width: 480px)
+  .promo-price
+    padding-top: 100px
+
+    &__img
+      min-height: 420px
+      margin-left: -$pd
+      margin-right: -$pd
+
+
+@media screen and (min-width: 760px)
+  //
+    .animated-screen
+      min-height: 400px
+
+  .promo-price
+    padding-top: 120px
+
+    &__img
+      min-height: 520px
+      margin-left: 0
+      margin-right: 0
+      background-image: url('../images/picture_price_middle.jpg')
+
+    &__text
+      width: 83.33%
+      margin: 0 auto
+
+  .price-list
+    &__cards
+      width: 83.33%
+      margin: 0 auto
+
+    &__item
+      &__content
+        width: 80%
+        margin: 0 auto
+
+        .content__wrapper
+          padding: 0
+
+  .price-info
+    padding: 64px 0 88px
+
+    &__text
+      width: 83.33%
+      margin: 0 auto
+
+    &__phone,
+    &__email
+      font-size: 32px
+      line-height: 46px
+
+
+@media screen and (min-width: 1000px)
+  //
+    .animated-screen
+      min-height: 600px
+
+  .need-to-hide
+    opacity: 1
+
+  .promo-price
+    padding-top: 110px
+    font-size: 0
+    line-height: 0
+    direction: rtl
+
+    &__img-pos
+      width: 58.33%
+      display: inline-block
+      vertical-align: middle
+      position: relative
+      z-index: 3
+
+    &__img
+      min-height: 530px
+      margin-left: $pd/2
+      margin-right: -40px
+    
+    &__text
+      width: 41.67%
+      min-height: 380px
+      display: inline-block
+      vertical-align: middle
+      direction: ltr
+      font-size: $default-font-size
+      line-height: $default-line-height
+
+    &__text-pos
+      max-width: 90%
+
+
+  .price-wrapper
+    position: relative
+    margin-top: -82px
+
+    &__back
+      position: absolute
+      left: $pd*3
+      top: 0
+      right: $pd*3
+      bottom: 0
+      z-index: 1
+
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        z-index: 2
+        left: 6.67%
+        right: 6.67%
+        top: 0
+        bottom: 0
+        background: #eae9e7
+
+  .price-list
+    font-size: 0
+    line-height: 0
+    position: relative
+    z-index: 5
+    padding-top: 15px
+
+    .btn-white
+      width: 100%
+      max-width: 260px
+
+    li
+      position: relative
+      padding-top: 12px
+      margin-bottom: 12px
+
+      &::before
+        content: ''
+        display: block
+        width: 70%
+        height: 1px
+        position: absolute
+        left: -1px
+        bottom: -9px
+        background: #f1f1f1
+
+    &__cards-shift
+      margin: 0 (-$pd/2)
+    
+    &__cards
+      width: 100%
+
+    &__card
+      width: 33.33%
+      display: inline-block
+      vertical-align: top
+      padding: 0 $pd/2
+      font-size: $default-font-size
+      line-height: $default-line-height
+
+    &__items-revert
+      width: 66.67%
+      display: inline-block
+      vertical-align: top
+      direction: rtl
+
+      .price-list__card
+        width: 50%
+        direction: ltr
+
+    &__item
+      margin-top: -100px
+      padding: 90px 0 92px
+
+      &__description
+        padding-bottom: 26px
+
+      &__content
+        .content__wrapper
+          padding: 0 $pd/2
+
+      &__icon
+        margin-bottom: 37px
+        margin-left: 1px
+
+    &__item-platinum
+      margin-top: -150px
+      padding: 80px 0 92px
+
+  .price-info
+    padding: 92px 0 138px
+    position: relative
+    z-index: 5
+
+    &__phone,
+    &__email
+      font-size: 56px
+      line-height: 68px
+
+    &__email
+      margin-top: 10px
+
+  
+@media screen and (min-width: 1320px)
+  //
+    .animated-screen
+      min-height: 760px
+
+  .promo-price
+    padding-top: 120px
+
+    &__img
+      margin-right: -60px
+      background-image: url('../images/picture_price_large.jpg')
+
+    &__text-pos
+      max-width: 80%
+
+    &__text
+      min-height: 400px
+
+      .head01
+        padding-bottom: 24px
+
+  .price-wrapper
+    margin-top: -42px
+
+  .price-list
+    padding-top: 0
+    margin-top: -105px
+
+    li
+      &::before
+        bottom: -13px
+
+    &__cards-shift
+      margin: 0 -15px
+
+    &__card
+      padding: 0 15px
+
+    &__item
+      &__icon
+        width: 58px
+        height: 40px
+
+      &__title
+        font-size: 56px
+        line-height: 68px
+
+      &__description
+        margin-top: 8px
+
+      &__button
+        margin-top: 30px
+
+    &__item-platinum
+      padding-top: 70px
+
+  .price-info
+    padding: 143px 0 188px
+
+
+@media screen and (min-width: 1600px)
+  .price-wrapper
+    &__back
+      &::before
+        left: 7.67%
+        right: 7.67%
+
+
+@media screen and (min-width: 1900px)
+  //
+    .animated-screen
+      min-height: 800px
+
+  $pd: 65px
+
+  .promo-price
+    padding-top: 158px
+
+    .content__wrapper
+      padding: 0 $pd
+    
+    &__img
+      min-height: 760px
+      margin-right: -95px
+
+    &__text
+      min-height: 576px
+
+    &__text-pos
+      max-width: 75%
+
+  .price-wrapper
+    margin-top: -185px
+
+    &__back
+      &::before
+        left: 8.67%
+        right: 8.67%
+
+  .price-list
+    &__item
+      padding: 138px 0 144px
+
+      &__content
+        margin: 0 95px
+
+      &__icon
+        margin-left: -7px
+
+      &__title-main
+        font-size: 80px
+        line-height: 84px
+
+    &__item-platinum
+      padding-top: 120px
+
+  .price-info
+    padding: 192px 0 238px
+
+
+
+/*** tests ***/
+.overlay_test.price320
+  background: #ff0000 url('../images/makets/price320.jpg') no-repeat center 0
+
+.overlay_test.price760
+  background: #ff0000 url('../images/makets/price760.jpg') no-repeat center 0
+
+.overlay_test.price1000
+  background: #ff0000 url('../images/makets/price1000.jpg') no-repeat center 0
+
+.overlay_test.price1320
+  background: #ff0000 url('../images/makets/price1320.jpg') no-repeat center 8px
+
+.overlay_test.price1900
+  background: #ff0000 url('../images/makets/price1900.jpg') no-repeat center -28px
+
+

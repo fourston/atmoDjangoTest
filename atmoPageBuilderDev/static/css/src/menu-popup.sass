@@ -1,0 +1,478 @@
+@import _mixins
+@import variables
+
+
+.menu-active-hide
+  .need-to-hide
+    display: none
+
+  .content__border
+    overflow: visible !important
+
+.menu-popup
+  position: absolute
+  left: 0
+  top: -20px
+  right: 0
+  z-index: 4
+  overflow-y: auto
+  transform: translateX(-100%)
+
+  .navigation-fixed &
+    top: -15px
+
+  .menu-active &
+    transition: transform .3s ease .1s
+    transform: translateX(0)
+
+  .menu-in &
+    transition: none
+    transform: inherit
+
+  .menu-out &
+    transition: transform .2s ease .75s
+    transform: translateX(100%)
+
+  .nav-up .navigation-fixed &
+    display: none !important
+
+  .popup__close
+    position: absolute
+    right: 20px
+    top: 20px
+
+    .menu-active &
+      position: fixed
+      transition-delay: .5s
+
+    .menu-out &
+      transition-delay: .1s
+
+    .navigation-fixed &
+      top: 15px
+
+  &__content
+    position: relative
+    background: $bg-color
+
+    &__back
+      position: absolute
+      height: 106px
+      left: 0
+      top: -20px
+      right: 0
+      z-index: 4
+      background: $color-white
+
+      .menu-active &
+        position: fixed
+
+    &__blocks
+      padding-bottom: 50px
+
+      .content__wrapper
+        opacity: 0
+        transform: translateY(-10px)
+        transition: opacity .4s ease-in .5s, transform .4s ease .5s
+
+        .menu-active &
+          opacity: 1
+          transform: translateY(0)
+
+        .menu-out &
+          transition-delay: .1s
+          opacity: 0
+          transform: translateY(10px)
+
+
+    &__title
+      font-size: $default-font-size
+      line-height: $default-line-height
+
+    &__about
+      padding: 106px 0 37px
+      background: $color-white
+
+    &__fitness
+      padding: 31px 0 35px
+      &-pos
+        padding: $pd*2
+
+  &__list
+    margin: 0
+    padding: 10px 0 0
+    list-style-type: none
+
+    &-right
+      padding-top: 0
+
+    &__item
+      margin: 18px 0 0
+      padding: 0
+      font-size: 14px
+      line-height: 17px
+      font-weight: 700
+      text-transform: uppercase
+      color: $color-light-gray2
+
+  &__socials
+    font-size: 0
+    line-height: 0
+    
+    &__icon
+      display: inline-block
+      vertical-align: top
+      margin-right: 10px
+      
+      path,
+      circle,
+      polygon
+        fill: #A5A5A5
+
+
+@media screen and (min-width: 480px)
+  .menu-popup
+    .content__wrapper
+      padding: 0 $pd
+
+    &__content
+      min-height: 536px
+      margin-left: -$pd
+      padding-left: $pd
+
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        left: 0
+        top: 0
+        right: 0
+        bottom: 0
+        z-index: 1
+        background: $bg-color
+
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        width: 50%
+        left: 0
+        top: 0
+        bottom: 0
+        z-index: 2
+        background: $color-white
+        transform: translateX(-100%)
+
+        .menu-active &
+          transition: transform .3s ease .3s
+          transform: translateX(0)
+
+        .menu-in &
+          transition: none
+          transform: inherit
+
+        .menu-out &
+          transition: width .2s ease .5s
+          width: 100%
+
+      &__back
+        margin-left: -$pd
+        background: $bg-color
+
+        &::before
+          content: ''
+          display: block
+          width: 50%
+          position: absolute
+          left: 0
+          top: 0
+          bottom: 0
+          z-index: 3
+          background: $color-white
+          transform: translateX(-100%)
+
+          .menu-active &
+            transition: transform .3s ease .3s
+            transform: translateX(0)
+
+          .menu-in &
+            transition: none
+            transform: inherit
+
+          .menu-out &
+            transition: width .2s ease .5s
+            width: 100%
+
+      &__blocks-pos
+        margin: 0 (-$pd)
+
+      &__blocks
+        width: 100%
+        height: 340px
+        position: absolute
+        top: 50%
+        z-index: 3
+        margin-top: -180px
+        padding: 0 $pd
+
+      &__about
+        width: 50%
+        display: inline-block
+        vertical-align: top
+        padding: 0
+        background: none
+
+      &__fitness
+        width: 50%
+        display: inline-block
+        vertical-align: top
+        padding: 0 0 0 $pd/2
+        background: none
+
+    &__list
+      padding-top: 17px
+
+      &-right
+        padding-top: 0
+
+    &__socials
+      width: 50%
+      margin-top: -23px
+
+
+@media screen and (min-width: 760px)
+  .menu-popup
+    top: -30px
+
+    .popup__close
+      top: 40px
+      right: 40px
+    
+    .content__wrapper
+      padding: 0 $pd/2
+
+    &__content
+      min-height: 590px
+
+      &::after
+        width: 41.67%
+
+      &__back
+        height: 140px
+
+        &::before
+          width: 41.67%
+
+      &__blocks
+        height: 371px
+        padding: 0 50px
+
+      &__fitness
+        padding: 0
+
+    &__list
+      padding-top: 16px
+      
+      &-right
+        padding-top: 0
+      
+      &__item
+        font-size: 16px
+        margin-top: 22px
+
+    &__socials
+      width: 40%
+
+
+@media screen and (min-width: 1000px)
+  .menu-popup
+    .content__wrapper
+      padding: 0 $pd
+
+    &__content
+      min-height: 600px
+
+      &::after
+        width: 35%
+
+      &__back
+        display: none
+        &::before
+          width: 35%
+
+      &__blocks
+        padding: 0 40px
+        height: 280px
+        margin-top: -135px
+
+      &__about
+        width: 41.67%
+
+      &__fitness
+        .content__wrapper
+          margin: 0 (-$pd/2)
+
+        .menu-popup__content__title
+          padding-left: $pd/2
+
+    &__list
+      &-left,
+      &-right
+        width: 50%
+        display: inline-block
+        vertical-align: top
+        padding-left: $pd/2
+        padding-right: $pd/2
+
+      &-right
+        padding-top: 16px
+        padding-left: 20px
+
+    &__socials
+      display: none
+
+
+@media screen and (min-width: 1320px)
+  .menu-active
+    .animated-screen
+      overflow: visible
+
+    .content__border-wrapper
+      overflow: hidden
+      margin-bottom: -40px
+
+  .menu-popup
+    left: -$pd
+    right: -$pd
+    top: -50px
+
+    .menu-active &
+      overflow: hidden
+
+    .popup__close
+      right: 60px
+      top: 60px
+
+    &__content
+      margin-left: 0
+      margin-right: 0
+
+      &::after
+        width: 33.33%
+
+      &__back
+        height: 160px
+        margin-left: 0
+        margin-right: 0
+
+        &::before
+          width: 33.33%
+
+      &__blocks
+        padding: 0 30px
+        height: 304px
+        margin-top: -160px
+
+      &__about
+        width: 41%
+        padding: 0 10px
+      
+      &__fitness
+        width: 49%
+        padding: 0 0 0 5px
+
+    &__list
+      padding-top: 11px
+
+      &__item
+        font-size: 18px
+        margin-top: 27px      
+
+
+@media screen and (min-width: 1600px)
+  .menu-active
+    .content__border-wrapper
+      margin-bottom: -60px
+
+  .menu-popup
+    top: -70px
+    left: -30px
+    right: -30px
+
+    .popup__close
+      top: 80px
+      right: 60px
+
+    .content__wrapper
+      padding: 0 15px
+
+    &__content
+      min-height: 860px
+      padding: 0
+
+      &::after
+        width: 25%
+
+      &__back
+        height: 180px
+
+        &::before
+          width: 25%
+
+      &__blocks-pos
+        margin: 0 -15px
+
+      &__blocks
+        height: 360px
+        margin-top: -240px
+        padding: 0 30px
+
+      &__about
+        width: 33.33%
+        padding: 0 30px
+
+      &__fitness
+        padding: 0 30px
+
+        .content__wrapper
+          margin: 0 -15px
+          padding: 0 15px 0 0
+
+        .menu-popup__content__title
+          padding-left: 15px
+
+    &__list
+      padding-top: 39px
+
+      &-left,
+      &-right
+        padding-left: 15px
+        padding-right: 15px
+
+      &__item
+        font-size: 20px
+        margin-top: 31px
+
+
+@media screen and (min-width: 1900px)
+  .menu-popup
+    .popup__close
+      right: 95px
+
+    &__content
+      &::after
+        width: 26%
+
+      &__back
+        &::before
+          width: 26%
+
+      &__blocks
+        padding: 0 65px
+
+      &__about
+        width: 35%
+
+      &__fitness
+        width: 52%
+        margin-left: -25px

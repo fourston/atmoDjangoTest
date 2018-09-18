@@ -1,0 +1,1348 @@
+@import variables
+
+// FITNESS
+.promo-fitness
+  padding: 0 0 92px
+
+  &__navigation
+    display: none
+
+  &__person-pos
+    min-height: 530px
+    max-height: 568px
+    position: relative
+
+  &__person
+    height: 387px
+    position: absolute
+    left: -$pd
+    right: -$pd - 48
+    top: 50%
+    margin-top: -194px
+    background-position: center center
+    background-repeat: no-repeat
+    background-size: cover
+
+    img
+      display: none
+
+    .gym &
+      background-image: url('../images/fitness/gym/main.png')
+
+    .yoga &
+      background-image: url('../images/fitness/yoga/main.png')
+
+    .group &
+      background-image: url('../images/fitness/group/main.png')
+
+    .cycle &
+      background-image: url('../images/fitness/cycle/main.png')
+
+    .swimming &
+      background-image: url('../images/fitness/swimming/main.png')
+
+    .nutrition &
+      background-image: url('../images/fitness/nutrition/main.png')
+
+    .children &
+      background-image: url('../images/fitness/children/main.png')
+
+    .fighting &
+      background-image: url('../images/fitness/fighting/main.png')
+
+
+  &__text
+    margin-top: -52px
+
+    .head01
+      padding-bottom: 14px
+
+  &__button
+    margin-top: 32px
+
+
+.fitness-trainer
+  padding-bottom: 82px
+
+  &__img
+    min-height: 340px
+    margin: 0 (-$pd)
+    background-repeat: no-repeat
+    background-position: center center
+    background-size: cover
+
+    &__src
+      display: none
+
+    .gym &
+      background-image: url('../images/fitness/gym/back.jpg')
+      
+    .yoga &
+      background-image: url('../images/fitness/yoga/back.jpg')
+
+    .group &
+      background-image: url('../images/fitness/group/back.jpg')
+
+    .cycle &
+      background-image: url('../images/fitness/cycle/back.jpg')
+
+    .swimming &
+      background-image: url('../images/fitness/swimming/back.jpg')
+
+    .nutrition &
+      background-image: url('../images/fitness/nutrition/back.jpg')
+
+    .children &
+      background-image: url('../images/fitness/children/back.jpg')
+
+    .fighting &
+      background-image: url('../images/fitness/fighting/back.jpg')
+
+  &__logo
+    min-height: 265px
+    margin: 0 (-$pd)
+    position: relative
+    background: $bg-dark
+    
+    &::after
+      content: ''
+      display: block
+      height: 90px
+      position: absolute
+      left: 50%
+      top: 50%
+      z-index: 2
+      margin-top: -43px
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: cover
+
+      .gym &
+        width: 90px
+        margin-left: -45px
+        background-image: url('../images/fitness/icons/icon-gym-01.png')
+
+      .yoga &
+        width: 85px
+        margin-left: -42px
+        background-image: url('../images/fitness/icons/icon-yoga-01.png')
+
+      .group &
+        width: 132px
+        margin-left: -66px
+        background-image: url('../images/fitness/icons/icon-group-01.png')
+
+      .cycle &
+        width: 90px
+        margin-left: -45px
+        background-image: url('../images/fitness/icons/icon-cycle-01.png')
+
+      .swimming &
+        width: 90px
+        margin-left: -45px
+        background-image: url('../images/fitness/icons/icon-swimming-01.png')
+
+      .nutrition &
+        width: 85px
+        margin-left: -42px
+        background-image: url('../images/fitness/icons/icon-nutr-01.png')
+
+      .children &
+        width: 90px
+        margin-left: -45px
+        background-image: url('../images/fitness/icons/icon-children-01.png')
+
+      .fighting &
+        width: 90px
+        margin-left: -45px
+        background-image: url('../images/fitness/icons/icon-fighting-01.png')
+
+
+  &__photo
+    min-height: 265px
+    margin: 0 (-$pd)
+    font-size: 0
+    line-height: 0
+
+    &__src
+      width: 100%
+      height: auto
+
+  &__info
+    margin: 30px 0 0
+
+    .head03
+      padding-bottom: 15px
+
+    &__name
+      .head02
+        padding-bottom: 0
+
+    &__photo,
+    &__second
+      display: none
+
+    &__text
+      margin-top: 25px
+
+  &__button
+    margin-top: 30px
+
+.fitness-programs
+  overflow: hidden
+  padding-bottom: 92px
+
+  &__item
+    &__title
+      display: none
+
+    &__title:hover
+      color: $color-dark
+
+  &__list
+    .head01
+      margin-bottom: -24px
+
+    .programs__item__title
+      padding-bottom: 10px
+
+    &__shift
+      display: none
+
+  .programs__item__content
+    opacity: 1
+    clip-path: polygon(0 0,100% 0,100% 100%,0 100%)
+
+  &__item
+    &__description
+      opacity: 0
+      transition: opacity .33s ease-in
+
+      &.is-animated
+        opacity: 1
+
+
+.fitness-other-programs
+  margin-top: 42px
+  opacity: 0
+  text-align: left
+  position: relative
+  z-index: 3
+
+  &-2
+    display: none
+
+  &.is-animated
+    opacity: 1
+    transition: opacity .33s ease-in .3s
+
+
+  &__list
+    padding-top: 11px
+    color: $color-dark
+
+    li
+      margin-top: 12px
+
+    &__item
+      letter-spacing: 1px
+      font-family: 'PT Serif', serif
+      text-transform: uppercase
+
+.fitness-extra
+  &__content
+    padding: 59px 0 49px
+    background: $color-white
+
+    .head01
+      padding-bottom: 14px
+
+    &__right
+      padding-top: 24px
+
+      .head01
+        display: none
+    
+    &__shift
+      display: none
+
+  &__button-1
+    display: none
+
+  &__button-2
+    margin-top: 22px
+    margin-bottom: 35px
+
+    .btn
+      width: 100%
+      max-width: 260px
+
+
+@media screen and (min-width: 414px)
+  .promo-fitness
+    &__person-pos
+      min-height: 520px
+      max-height: 736px
+
+
+@media screen and (min-width: 480px)
+  $pd: 20px
+
+  .promo-fitness
+    &__person-pos
+      min-height: 680px
+
+    &__person
+      height: 440px
+      left: -$pd*3 - 5
+      margin-top: -220px
+      background-size: contain
+
+
+@media screen and (min-width: 760px)
+  $pd: 20px
+
+  $default-font-size: 16px
+  $default-line-height: 28px
+
+  .promo-fitness
+    position: relative
+    padding-bottom: 88px
+
+    &::before
+      content: ''
+      display: block
+      width: 50%
+      position: absolute
+      right: 0
+      top: 0
+      bottom: 0
+      z-index: 1
+      background: $color-light-gray
+
+    &__navigation
+      display: block
+      right: 0
+      top: 50%
+      bottom: inherit
+      margin-top: -207px
+      direction: ltr
+
+      .gallery__navigation-prev-text,
+      .gallery__navigation-next-text
+        display: inline
+      
+    &__person-pos
+      position: relative
+      z-index: 3
+      max-height: 760px
+
+    &__person
+      height: 506px
+      margin-top: -236px
+      margin-left: -4px
+      background-size: contain
+
+    &__text
+      position: relative
+      z-index: 2
+
+  .fitness-trainer
+    margin-top: 100px
+    padding-bottom: 94px
+
+    &__img
+      min-height: 340px
+      margin: 0
+
+      &__src
+        display: block
+        width: 60%
+        height: auto
+        opacity: 0
+
+    &__photo-block
+      font-size: 0
+      line-height: 0
+      position: relative
+
+    &__logo
+      width: 43%
+      position: absolute
+      right: 0
+      top: 0
+      bottom: 0
+      margin: 0
+
+    &__photo
+      width: 57%
+      display: inline-block
+      vertical-align: top
+      margin: 0
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: cover
+
+      &__src
+        opacity: 0
+
+      .gym &
+        background-image: url('../images/fitness/gym/person01.jpg')
+
+      .yoga &
+        background-image: url('../images/fitness/yoga/person01.jpg')
+
+      .group &
+        background-image: url('../images/fitness/group/person01.jpg')
+
+      .cycle &
+        background-image: url('../images/fitness/cycle/person01.jpg')
+
+      .swimming &
+        background-image: url('../images/fitness/swimming/person01.jpg')
+
+      .nutrition &
+        background-image: url('../images/fitness/nutrition/person01.jpg')
+
+      .children &
+        background-image: url('../images/fitness/children/person01.jpg')
+
+      .fighting &
+        background-image: url('../images/fitness/fighting/person01.jpg')
+
+  .fitness-programs
+    position: relative
+    padding-bottom: 0
+
+    .head01
+      max-width: 75%
+      margin-left: 30px
+      padding-bottom: 40px
+      text-align: left
+
+    &__list
+      font-size: 0
+      line-height: 0
+      position: relative
+      z-index: 3
+      margin-right: -40px
+      padding-right: 40px
+      padding-bottom: 90px
+
+      &::before
+        content: ''
+        display: block
+        width: 50%
+        position: absolute
+        right: 0
+        top: 0
+        bottom: 0
+        z-index: 1
+        background: $color-light-gray
+
+      &__left
+        width: 43%
+        display: inline-block
+        vertical-align: top
+        margin-top: 89px
+        text-align: right
+      
+      &__shift
+        width: 14%
+        display: inline-block
+        vertical-align: top
+      
+      &__right
+        width: 43%
+        display: inline-block
+        vertical-align: top
+        padding-top: 47px
+        position: relative
+        z-index: 3
+  
+    &__item
+      width: 100%
+      padding: 0
+      margin-top: 38px
+
+      .fitness-programs__list__left &
+        margin-right: -15px
+
+      .fitness-programs__list__right &
+        margin-left: -15px
+
+      .programs__item__content
+        width: 100%
+        min-width: 0
+        margin: 0
+        text-align: left
+
+  .fitness-other-programs
+    margin-top: 46px
+    padding: 0
+    font-size: 16px
+    line-height: 28px
+
+    &-1
+      display: none
+
+    &-2
+      width: 100%
+      display: inline-block
+      text-align: left
+      padding: 0 40px 0 30px
+
+  .fitness-extra
+    position: relative
+
+    &::before
+      content: ''
+      display: block
+      width: 50%
+      position: absolute
+      right: 0
+      top: 0
+      bottom: 0
+      z-index: 1
+      background: $color-light-gray
+
+    &__content
+      position: relative
+      z-index: 2
+
+      .content__wrapper
+        width: 83.33%
+        padding: 0
+        margin: 0 auto
+
+      &__right
+        font-size: 0
+        line-height: 0
+
+    &__list-left,
+    &__list-right,
+    &__list-left-2,
+    &__list-right-2
+      width: 100%
+
+    &__list
+      font-size: 0
+      line-height: 0
+      margin: 0 -10px
+
+      li
+        padding: 0 10px
+
+      &__item
+        width: 100%
+        display: inline-block
+        vertical-align: top
+
+
+@media screen and (min-width: 1000px)
+  $pd: 20px
+
+  $default-font-size: 16px
+  $default-line-height: 28px
+
+  $min-wp-height: 640px
+  $max-wp-height: 720px
+
+  .promo-fitness
+    padding-bottom: 40px
+    font-size: 0
+    line-height: 0
+    direction: rtl
+
+    &::before
+      display: none
+
+    &__navigation
+      margin-top: -149px
+
+    &__person-pos
+      width: 57%
+      display: inline-block
+      vertical-align: middle
+      text-align: center
+      direction: ltr
+
+    &__person
+      width: 100%
+      left: 0
+      right: inherit
+      height: auto
+      margin-left: -53px
+      background-image: none !important
+
+      img
+        display: block
+        width: 100%
+        min-width: 740px
+        height: auto
+
+    &__text
+      width: 43%
+      display: inline-block
+      vertical-align: middle
+      margin: 0
+      padding-right: $pd*2
+      padding-top: 128px
+      font-size: $default-font-size
+      line-height: $default-line-height
+      direction: ltr
+
+      .head01
+        width: 70%
+
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        left: 100%
+        bottom: 8px
+        z-index: 1
+        width: 5000px
+        height: 3000px
+        background: $color-light-gray
+
+
+  .fitness-trainer
+    padding-bottom: 102px
+
+    &__photo-block
+      display: none
+
+    &__info
+      margin: 0 auto
+      font-size: 0
+      line-height: 0
+
+      &__photo
+        width: 58.33%
+        display: inline-block
+        vertical-align: middle
+        padding: 0 $pd/2 0 0
+
+        &-pos
+          position: relative
+
+        img
+          width: 100%
+          height: auto
+          position: absolute
+          left: 0
+          bottom: 0
+
+      &__content
+        width: 41.67%
+        height: 290px
+        display: inline-block
+        vertical-align: bottom
+        padding: 108px 0 0 $pd*2-10
+        font-size: $default-font-size
+        line-height: $default-line-height
+        
+      &__text
+        display: none
+
+      .fitness-trainer__button
+        display: none
+
+      &__second
+        display: block
+        margin: 0 auto
+        position: relative
+        font-size: 0
+        line-height: 0
+
+        &-pos
+          position: relative
+          display: inline-block
+          vertical-align: top
+
+        &__text
+          width: 33.33%
+          display: inline-block
+          vertical-align: middle
+          text-align: right
+          padding: 50px ($pd*2-10) 0 0
+          font-size: $default-font-size
+          line-height: $default-line-height
+
+        &__logo
+          width: auto
+          left: 33.33%
+          right: 41.67%
+          margin: 0 ($pd/2)
+
+          &::after
+            height: 120px
+            margin-top: -60px
+
+            .gym &
+              width: 120px
+              margin-left: -60px
+
+            .yoga &
+              width: 115px
+              margin-left: -57px
+
+            .group &
+              width: 176px
+              margin-left: -88px
+
+            .cycle &
+              width: 120px
+              margin-left: -60px
+
+            .swimming &
+              width: 120px
+              margin-left: -60px
+
+            .nutrition &
+              width: 115px
+              margin-left: -57px
+
+            .children &
+              width: 120px
+              margin-left: -60px
+
+            .fighting &
+              width: 120px
+              margin-left: -60px
+
+          &-space
+            width: 25%
+            display: inline-block
+            vertical-align: middle
+
+        &__photo
+          width: 41.67%
+          display: inline-block
+          vertical-align: middle
+
+          img
+            width: 100%
+            height: auto
+
+          &__shift
+            margin-left: -$pd/2
+
+  
+  .fitness-programs
+    padding-bottom: 93px
+
+    .head01
+      display: inline-block
+      text-align: right
+      margin: 0 15px 0 0
+      padding-bottom: 15px
+
+    &__list
+      margin-right: 0
+      padding-right: 0
+      padding-bottom: 0
+
+      &::before
+        width: 3000px
+        left: 43%
+        bottom: -1000px
+        right: inherit
+
+      &__left
+        width: 33.3%
+        margin-left: 25px
+        text-align: right
+      
+      &__shift
+        width: 19.4%
+
+      &__right
+        width: 33.3%
+        margin-left: -50px
+
+    &__item
+      .fitness-programs__list__left &
+        margin-right: 0
+
+      .fitness-programs__list__right &
+        margin-left: 0
+
+    .programs__item__content
+      text-align: left
+  
+  .fitness-other-programs
+    width: 154%
+    max-width: 600px
+    padding-left: 15px
+    margin-top: 94px
+
+    &__list
+      font-size: 0
+      line-height: 0
+      margin: 0 (-$pd/2)
+
+      li
+        padding: 0 $pd/2
+
+      &__item
+        width: 50%
+        display: inline-block
+        vertical-align: top
+        font-size: $default-font-size
+        line-height: $default-line-height
+
+        .fitness-other-programs-2 &
+          width: 100%
+
+  .fitness-extra
+    position: relative
+    z-index: 3
+
+    .content__wrapper
+      width: 100%
+
+    &__content
+      padding: 89px 0 79px
+      font-size: 0
+      line-height: 0
+
+      &__left
+        width: 41.67%
+        display: inline-block
+        vertical-align: top
+        padding: 0 $pd/2 0 $pd*2
+        text-align: right
+        font-size: $default-font-size
+        line-height: $default-line-height
+
+        .head01
+          display: none
+
+        &__text
+          width: 100%
+          max-width: 390px
+          min-width: 315px
+          display: inline-block
+          text-align: right
+          padding-top: 6px
+
+      &__shift
+        width: 11.06%
+        display: inline-block
+        vertical-align: top
+
+      &__right
+        width: 47.27%
+        display: inline-block
+        vertical-align: top
+        padding: 0 $pd 0 0
+        margin-left: -10px
+        font-size: $default-font-size
+        line-height: $default-line-height
+
+        .head01
+          display: block
+
+    &__list-left-2,
+    &__list-right-2
+      display: block
+      width: 100%
+
+    &__list
+      &__item
+        width: 100%
+
+    &__button-1
+      display: block
+
+    &__button-2
+      display: none
+
+  .footer
+    position: relative
+    z-index: 3
+
+    &-bottom
+      &__documents
+        &__forms
+          padding-left: 16px
+
+
+@media screen and (min-width: 1320px)  
+  .promo-fitness
+    padding-bottom: 25px
+
+    .content__wrapper
+      position: relative
+
+      &::before
+        content: ''
+        display: block
+        height: 20px
+        position: absolute
+        left: 0
+        right: 0
+        top: -20px
+        z-index: 3
+        background: $color-white
+
+      &::after
+        content: ''
+        display: block
+        width: 20px
+        position: absolute
+        right: -20px
+        top: -20px
+        bottom: 0
+        z-index: 3
+        background: $color-white
+
+    &__arrow
+      width: 8px
+      height: 68px
+      position: absolute
+      z-index: 9
+      left: $pd*2
+      bottom: 15px
+      background-image: url('../images/arrow.png')
+      background-repeat: no-repeat
+      background-position: left top
+      background-size: 100%
+
+    &__navigation
+      right: -20px
+      width: auto
+      height: 125px
+
+      a:hover
+        color: $color-dark
+
+      .gallery__navigation-next-text
+        margin-top: 5px
+
+      .gallery__navigation-prev-text,
+      .gallery__navigation-next-text
+        display: block
+        font-size: 16px
+        line-height: 28px
+        position: relative
+        white-space: nowrap
+
+        span
+          position: absolute
+          right: 80px
+          top: 16px
+
+    &__person-pos
+      margin-top: -15px
+      min-height: 680px
+      max-height: 800px
+
+    &__person
+      margin-left: -51px
+
+      img
+        min-width: 718px
+
+    &__text
+      padding-top: 68px
+
+      .head01
+        padding-bottom: 25px
+
+    &__button
+      margin-top: 42px
+
+
+  .fitness-trainer
+    padding-bottom: 150px
+
+    &__info
+      width: 88%
+
+      &__photo
+        width: 58.33%
+        padding: 0
+
+      &__content
+        width: 40%
+        height: 300px
+        padding: 92px 0 0 $pd*2
+      
+      &__second
+        width: 88%
+
+        &__text
+          width: 32%
+          padding: 40px $pd*2 0 0
+
+          &-pos
+            width: 85%
+            display: inline-block
+
+
+        &__logo-space
+          width: 26.33%
+
+        &__logo
+          width: 26.33%          
+          left: 32%
+          right: inherit 
+          margin: 0
+
+        &__photo
+          width: 41.67%
+
+          &__shift
+            margin: 0
+            padding-right: 30px
+
+    &__button
+      margin-top: 40px
+
+  .fitness-programs
+    padding-bottom: 142px
+
+    .head01
+      width: 50%
+      padding-right: 10px
+      padding-bottom: 85px
+
+    &__list
+      margin: 0 0 0 -10px
+      padding: 0
+
+      &::before
+        left: 34.67%
+
+      &__shift
+        display: none
+
+      &__left
+        width: 50%
+        margin: 0
+        padding: 140px 10px 0 0
+        position: relative
+        z-index: 3
+        text-align: left
+
+      &__right
+        width: 50%
+        margin: 0
+        padding: 91px 0 0 10px
+
+    .programs__item__link
+      .programs__item__title
+        display: none
+    
+    .programs__item__description
+      width: 50%
+      display: inline-block
+      vertical-align: top
+      padding: 53px 15px 0 30px
+
+    &__item
+      margin-top: 50px
+
+      &__img-pos
+        width: 50%
+        display: inline-block
+        vertical-align: top
+      
+      &__title
+        width: 75%
+        display: block
+        margin: 0
+
+  .fitness-other-programs
+    width: 100%
+    padding-left: 10px
+    margin-top: 102px
+
+    &-2
+      margin-top: 62px
+
+    &__list
+      &__item
+        .fitness-other-programs-2 &
+          width: 50%
+
+
+  .fitness-extra
+    &__content
+      padding: 138px 0 128px
+      
+      &__left
+        width: 41.67%
+        margin: 0
+        padding: 0 15px 0 0
+
+        &__text
+          width: 80%
+          padding-top: 20px
+
+      &__shift
+        width: 8.33%
+
+      &__right
+        width: 50%
+        margin: 0
+        padding: 14px 0 0 15px
+
+
+  .footer
+    &-bottom
+      &__documents
+        &__forms
+          padding-left: 15px
+
+
+@media screen and (min-width: 1600px)
+  .promo-fitness
+    padding-bottom: 77px
+
+    .content__wrapper
+      &::before
+        height: 30px
+        top: -30px
+
+      &::after
+        width: 30px
+        right: -30px
+        top: -30px
+
+    &__navigation
+      right: -30px
+      margin-top: -133px
+
+    &__person-pos
+      min-height: 700px
+      max-height: 100%
+      margin-top: -27px
+
+    &__person
+      width: auto
+      margin-left: -82px
+      margin-right: 45px
+
+    &__text
+      padding-top: 83px
+
+      .head01
+        width: 60%
+
+      &::before
+        margin-left: -8px
+
+  .fitness-trainer
+    padding-bottom: 200px
+
+    .head02
+      font-size: 36px
+      line-height: 48px
+
+    &__info
+      width: 87%
+      padding: 0 30px
+
+      &__photo
+        width: 59%
+
+      &__content
+        height: 350px
+        padding: 142px 0 0 50px
+
+      &__second
+        width: 87%
+        padding: 0 30px
+
+        .head02
+          padding-bottom: 12px
+
+        &__text
+          width: 31.1%
+          padding: 21px 50px 0 0
+
+        &__logo-space
+          width: 27.9%
+
+        &__logo
+          width: 27.9%
+          left: 31.1%
+
+        &__photo
+          width: 41%
+
+          &__shift
+            padding-right: 0
+  
+  .fitness-programs
+    padding-bottom: 192px
+
+    &__list
+      margin: 0 -15px
+      padding-top: 50px
+
+      &::before
+        margin-left: -3px
+
+      &__left
+        padding-right: 0
+
+      &__right
+        padding-left: 0
+
+    &__item
+      margin-top: 45px
+
+      .programs__item__description
+        width: 43%
+        padding-left: 35px
+
+      &__title
+        font-size: 36px
+        line-height: 48px
+
+  .fitness-other-programs
+    max-width: 100%
+    margin-top: 88px
+    padding-left: 15px
+
+    &-2
+      margin-top: 102px
+
+    &__list
+      width: 78%
+      max-width: 582px
+      margin: 0 -15px
+
+      li
+        padding: 0 15px
+
+  .fitness-extra
+    &__content
+      &__left
+        &__text
+          width: 85%
+          max-width: 510px
+          padding-top: 24px
+
+      &__right
+        padding-top: 12px
+
+      &__item
+        .head02
+          font-size: 36px
+          line-height: 48px
+          padding-bottom: 12px
+
+
+@media screen and (min-width: 1900px)
+  $pd: 65px
+
+  .promo-fitness
+    text-align: left
+    padding-bottom: 65px
+
+    &__person-pos
+      margin-top: 0
+      max-height: 100%
+
+    &__person
+      top: 0
+      margin-top: 50px
+      margin-left: -46px
+      margin-right: 0
+
+    &__text
+      max-width: 750px
+      padding-top: 110px
+      padding-right: $pd
+
+      &::before
+        margin-left: -10px
+
+  .fitness-trainer
+    padding-bottom: 250px
+    max-width: 2300px
+    margin-left: auto
+    margin-right: auto
+
+    &__info
+      width: 86.6%
+
+      &__content
+        height: 400px
+        padding: 192px 0 0 72px
+
+      &__second
+        width: 86.6%
+
+        &__text
+          margin-top: -52px
+          padding: 0 72px 0 0
+
+  .fitness-programs
+    padding-bottom: 242px
+    max-width: 2300px
+    margin-left: auto
+    margin-right: auto
+
+    .head01
+      padding-bottom: 67px
+
+    .programs__item__description
+      padding-top: 65px
+
+    &__list
+      &::before
+        margin-left: -8px
+
+      &__left
+        padding-top: 137px
+
+
+  .fitness-other-programs
+    margin-top: 100px
+
+    &__list
+      width: 68%
+
+  .fitness-extra
+    max-width: 2300px
+    margin-left: auto
+    margin-right: auto
+
+    &__content
+      padding-top: 136px
+
+      &__left
+        &__text
+          padding-top: 79px
+
+      &__right
+        padding-top: 62px
+
+
+/*** tests ***/
+.overlay_test.fitness320
+  background: #ff0000 url('../images/makets/fitness320.jpg') no-repeat center 0
+
+.overlay_test.fitness760
+  background: #ff0000 url('../images/makets/fitness760.jpg') no-repeat center 0
+
+.overlay_test.fitness1000
+  background: #ff0000 url('../images/makets/fitness1000.jpg') no-repeat center 0
+
+.overlay_test.fitness1320
+  background: #ff0000 url('../images/makets/fitness1320.jpg') no-repeat center -20px
+
+.overlay_test.fitness1600
+  background: #ff0000 url('../images/makets/fitness1600.jpg') no-repeat center 21px
+
+.overlay_test.fitness1900
+  background: #ff0000 url('../images/makets/fitness1900.jpg') no-repeat center 26px
+
+

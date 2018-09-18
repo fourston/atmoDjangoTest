@@ -1,0 +1,1048 @@
+//
+  @media screen and (min-width: 400px)
+    .gallery
+      &__slide
+        &__person
+          &__img
+            max-height: 640px
+
+@media screen and (min-width: 414px)
+  .gallery
+    &__slide
+      &__person
+        &__img
+          max-height: 736px
+
+@media screen and (min-width: 480px)
+  $pd: 20px
+
+  .content__wrapper
+    padding: 0 $pd*2
+
+  .navigation
+    &__logo
+      width: 250px
+      height: 60px
+      background-image: url('../images/logo.png')
+
+    &-fixed
+      .nav-up &
+        transform: translateY(-110px)
+
+    &__menu-icon
+      margin-top: 24px
+
+  .gallery
+    &__slide
+      &__person
+        &__img
+          min-height: 720px
+          max-height: 740px
+          margin-top: 60px
+
+          img
+            .gallery__slide02 &
+              margin-left: 25px
+
+            .gallery__slide03 &
+              margin-left: 10px
+
+        &::before
+          top: 50%
+
+        &::after,
+        &__back
+          top: 37.4%
+          bottom: 12.6%
+
+      &__name
+        padding-top: 14px
+
+      &__content
+        padding-top: 36px
+
+  .about-main
+    padding-top: 100px
+
+    &__dots
+      height: 314px
+      line-height: 314px
+
+    &__text
+      padding: 43px $pd 0
+
+  .promo-main
+    &__text
+      margin-left: -$pd
+      margin-right: -$pd
+
+      .content__wrapper
+        padding: 0 $pd - 2 0 $pd
+
+  .footer-top
+    padding: 42px 0 52px
+
+    &__join
+      margin: 66px 0 84px
+      font-size: 52px
+      line-height: 68px
+
+      &__line-top,
+      &__line-bottom
+        width: 260px
+        margin-left: -130px
+
+      &__line-top
+        top: -35px
+
+      &__line-bottom
+        bottom: -41px
+
+@media screen and (min-width: 600px)
+  .gallery
+    &__slide
+      &__person
+        &__img
+          .gallery__slide02 &
+            background-size: contain
+
+
+@media screen and (min-width: 760px)
+  $pd: 20px
+
+  $default-font-size: 16px
+  $default-line-height: 28px
+
+  .line
+    display: block
+
+  .navigation
+    top: 30px
+
+    &__content
+      padding: 0 $pd*2
+
+    &__logo
+      margin-left: 0
+
+    &-fixed
+      .nav-up &
+        transform: translateY(-120px)
+
+      .nav-down &
+        transform: translateY(-30px)
+
+  .gallery
+    &__navigation
+      width: 120px
+      height: 60px
+      position: absolute
+      right: 0
+      z-index: 9
+      margin-top: -30px
+      font-size: 0
+      line-height: 0
+
+      &-prev,
+      &-next
+        width: 60px
+        height: 60px
+        display: inline-block
+        vertical-align: top
+        cursor: pointer
+        position: relative
+        text-align: center
+        line-height: 60px
+        background: #282828
+
+        a:hover &,
+        &:hover
+          background: #787878
+
+        &::before
+          content: ''
+          display: inline-block
+          width: 7px
+          height: 12px
+          vertical-align: middle
+          background-image: url('../images/nav_arrow.png')
+          background-position: left top
+          background-repeat: no-repeat
+          background-size: 100%
+
+    &__slide
+      &__person
+        padding: 0
+
+        &::before
+          top: 46.5%
+
+        &::after,
+        &__back
+          top: 32.5%
+          bottom: 13.5%
+
+        &__img
+          min-height: 600px
+          max-height: 800px
+          padding-top: 0
+          margin-top: 20px
+
+          img
+            .gallery__slide02 &,
+            .gallery__slide03 &
+              margin-left: 0
+
+      &__button-join,
+      &__button-video
+        display: inline-block
+        vertical-align: top
+
+      &__button-video
+        margin: 0 0 0 25px
+
+  .about-main
+    padding: 93px $pd*2 0
+
+    &__dots
+      margin: 0 $pd*2
+
+    &__text
+      padding-left: $pd*2
+      padding-right: $pd*2
+
+  .programs
+    font-size: 0
+    line-height: 0
+    padding: 68px $pd*2 92px
+
+    &__row-2
+      margin: 0 -30px
+
+    &__item
+      display: inline-block
+      width: 50%
+      margin: 6px 0 0
+      padding: 0 15px
+      vertical-align: top
+
+      &-2
+        margin-top: 56px
+
+      &__content
+        width: 79%
+        min-width: 300px
+        margin: 0 auto
+
+      &__img
+        margin: 0 0 16px
+        overflow: hidden
+        -webkit-clip-path: inset(15px)
+        clip-path: inset(15px)
+        transition: all .3s ease .1s
+
+        .programs__item__link:hover &
+          -webkit-clip-path: inset(0)
+          clip-path: inset(0)
+
+        &-small
+          display: none
+
+        &-large
+          display: block
+
+      &__title
+        display: inline-block
+        padding: 0
+        margin: 0 15px
+
+      &__description
+        padding-left: 15px
+        padding-right: 15px
+        font-size: $default-font-size
+        line-height: $default-line-height
+
+  .promo-main
+    &__text
+      margin: -120px 0 0
+      padding: 69px $pd+10 91px
+
+
+@media screen and (min-width: 1000px)
+  $pd: 20px
+
+  $default-font-size: 16px
+  $default-line-height: 28px
+
+  $min-wp-height: 640px
+  $max-wp-height: 720px
+
+  .viewport-screen
+    position: relative
+    min-height: $min-wp-height
+    max-height: $max-wp-height
+
+  .gallery
+    min-height: $min-wp-height
+    max-height: $max-wp-height
+
+    &__slide
+      &__person
+        float: right
+        width: 57%
+
+        &::before
+          top: 0
+
+        &::after,
+        &__back
+          height: 214px
+          left: -$pd*2
+          top: initial
+          bottom: 18.4%
+
+        &__img
+          min-height: $min-wp-height
+          max-height: $max-wp-height
+          margin-top: 12px
+
+      &__content
+        width: 43%
+        position: absolute
+        left: 0
+        top: 50%
+        margin-top: -160px
+
+      .head01
+        margin-right: -$pd
+
+      &__name
+        padding-top: 27px
+
+      &__text
+        padding-right: $pd
+
+      &__buttons
+        padding-top: 44px
+
+      &__button-join,
+      &__button-video
+        display: block
+
+      &__button-video
+        margin: 11px 0 0
+
+  .about-main
+    height: 464px
+    padding: 0
+    position: absolute
+    left: 0
+    top: 50%
+    right: 0
+    margin-top: -232px
+    font-size: 0
+    line-height: 0
+
+    &__logo
+      width: 223px
+      height: 223px
+
+      &__circle03
+        left: 39px
+        top: 39px
+
+      &__circle04
+        left: 59px
+        top: 59px
+
+    &__dots-wrapper
+      width: 43%
+      height: 464px
+      padding-right: $pd
+      display: inline-block
+      position: relative
+      vertical-align: top
+      text-align: center      
+
+    &__dots
+      width: 332px
+      height: 464px
+      line-height: 464px
+      position: absolute
+      left: 50%
+      top: 0
+      bottom: 0
+      margin: 0 0 0 -156px
+
+    &__text
+      width: 57%
+      padding-left: 0
+      padding-top: 64px
+      display: inline-block
+      vertical-align: top
+      font-size: $default-font-size
+      line-height: $default-line-height
+
+    &__button
+      padding-top: 42px
+
+  .programs
+    padding-top: 50px
+    padding-bottom: 141px
+
+    &__row-2
+      margin: 0 -10px
+
+    &__item
+      margin: -12px 0 0
+
+      &__content
+        max-width: 100%
+
+      &-2
+        margin-top: 38px
+
+  .promo-main
+    padding: 0 $pd*2
+
+    .head02
+      margin-top: 31px
+      padding-bottom: 23px
+
+    &__img
+      height: auto
+      background-image: none
+
+      &__src
+        display: block
+        width: 100%
+        height: auto
+        opacity: 0
+
+    &__text
+      margin: -100px 39px 0
+      padding: 50px 58px 192px
+
+
+  .footer
+    &-line
+      display: block
+
+    &-top
+      height: 520px
+      padding: 88px 0 52px
+      position: relative
+
+      &__contacts-pos
+        position: absolute
+        left: $pd*2
+        top: 152px
+        text-align: left
+
+      &__socials-pos
+        position: absolute
+        right: $pd*2
+        top: 152px
+        text-align: right
+
+      &__phone
+        &-mini
+          display: none
+        
+        &-large
+          display: block
+
+      &__socials
+        &-mini
+          display: none
+        
+        &-large
+          display: block
+
+      &__join
+        margin-top: 121px
+
+      &__line-top
+        top: -76px
+
+      &__line-bottom
+        bottom: -86px
+
+    &-bottom
+      padding: 92px 0 88px
+      font-size: 0
+      line-height: 0
+      
+      .content__wrapper
+        padding: 0 $pd*2 - 10
+
+      &__rights
+        width: 33%
+        padding: 0 10px
+        display: inline-block
+        vertical-align: top
+        text-align: left
+
+      &__copy
+        padding-bottom: 12px
+
+      &__documents
+        width: 67%
+        padding: 0 10px
+        margin: 0
+        display: inline-block
+        vertical-align: top
+        text-align: left
+
+        &__shift
+          margin: 0 -10px
+        
+        &__forms,
+        &__rules
+          width: 50%
+          padding: 0 10px
+          display: inline-block
+          vertical-align: top
+
+
+@media screen and (min-width: 1320px)
+  $pd: 20px
+
+  .head01
+    font-size: 44px
+    line-height: 58px
+
+  .content__border
+    margin: $pd
+
+  $min-wp-height: 660px
+  $max-wp-height: 800px
+
+  .viewport-screen
+    min-height: $min-wp-height
+    max-height: $max-wp-height
+
+  .animated-screen
+    overflow: visible
+
+  .navigation
+    &-fixed
+      padding-left: $pd
+      padding-right: $pd
+
+    &__list
+      display: inline-block
+      vertical-align: top
+      margin: 17px 0 0 20px
+      font-size: 0
+      line-height: 0
+
+      &__item
+        display: inline-block
+        vertical-align: top
+        margin: 0 0 0 22px
+        font-size: 15px
+        line-height: 18px
+        color: #787878
+
+    &__menu-icon
+      position: relative
+      margin-top: 27px
+
+      &__link
+        width: auto
+        font-size: 15px
+        line-height: 17px
+        padding-right: 44px
+
+        &__burger
+          width: 23px
+          position: absolute
+          right: 0
+          top: 0
+          margin-top: -2px
+
+          &::before
+            width: 23px
+            top: -10px
+
+          &::after
+            width: 23px
+            top: 10px
+
+
+  .gallery
+    min-height: $min-wp-height
+    max-height: $max-wp-height
+
+    &::before
+      content: ''
+      display: block
+      width: 8px
+      height: 68px
+      position: absolute
+      z-index: 9
+      left: $pd*2
+      bottom: 30px
+      background-image: url('../images/arrow.png')
+      background-repeat: no-repeat
+      background-position: left top
+      background-size: 100%
+
+    &__navigation
+      right: -$pd
+
+    &__slide
+      &__person
+        width: 50%
+        min-height: $min-wp-height - 20
+        max-height: $max-wp-height
+
+        &::before
+          left: 15px
+
+        &::after,
+        &__back
+          height: 215px
+          right: -$pd
+          left: -35px
+          bottom: 23%
+
+        &__img
+          min-height: $min-wp-height
+          max-height: $max-wp-height
+          margin-top: -10px
+
+          .gallery__slide01 &
+            margin-left: -90px
+          
+          .gallery__slide02 &
+            margin-left: 0
+
+          .gallery__slide03 &
+            margin-left: -60px
+
+
+      &__content
+        margin-top: -148px
+
+      &__name
+        padding-top: 25px
+
+      &__button-join,
+      &__button-video
+        display: inline-block
+
+      &__button-video
+        margin: 0 0 0 25px
+
+
+  .about-main
+    margin-top: -240px
+
+    &__dots-wrapper
+      width: 50%
+
+    &__text
+      width: 50%
+      padding-left: 15px
+      padding-top: 42px
+
+
+  .programs
+    margin: 0 -15px
+    padding: 28px 0 250px
+
+    &__row-2
+      width: 50%
+      display: inline-block
+      margin: 0
+
+    &__item
+      margin-top: -12px
+
+      &-2
+        margin-top: 88px
+
+      &__content
+        width: 100%
+        min-width: auto
+
+      &__img
+        margin: 0 0 29px
+        -webkit-clip-path: inset(10px)
+        clip-path: inset(10px)
+
+      &__description
+        padding-left: 10px
+        padding-right: 10px
+
+      &__title
+        margin: 0 10px
+
+  .promo-main
+    .head02
+      padding-bottom: 11px
+    
+    .content__wrapper
+      padding: 0
+
+    &__line
+      display: block
+      content: ''
+      display: block
+      position: absolute
+      left: 50%
+      width: 25%
+      top: -150px
+      bottom: 0
+      z-index: 1
+      margin: 0 0 0 15px
+
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        left: 0
+        right: 35px
+        top: 0
+        bottom: 0
+        z-index: 1
+        background: #eae9e7
+
+    &__img
+      z-index: 2  
+
+    &__text-pos
+      width: 50%
+      text-align: right
+
+      &-shift
+        margin-right: -15px
+
+    &__text
+      display: inline-block
+      width: 91%
+      margin: -157px 0 0 0
+      padding: 50px 50px 192px
+      text-align: left
+
+  .footer-top
+    height: 561px
+
+    &__join
+      font-size: 78px
+      line-height: 68px
+      margin-top: 132px
+
+      &__line-top
+        top: -87px
+
+      &__line-bottom
+        bottom: -97px
+
+  .footer-bottom
+    padding-bottom: 114px
+    
+    &__rights
+      width: 50%
+    
+    &__documents
+      width: 50%
+
+      &__forms
+        padding: 0 15px
+
+      &__rules
+        padding: 0 0 0 18px
+
+
+@media screen and (min-width: 1600px)
+  $pd: 30px
+
+  .head02
+    font-size: 30px
+    line-height: 42px
+    padding-bottom: 24px
+
+  .content__border
+    margin: $pd
+
+  .content__wrapper
+    padding: 0 $pd
+
+  $max-wp-height: 100%
+
+  .viewport-screen
+    max-height: $max-wp-height
+
+  .navigation
+    top: 40px
+
+    &-fixed
+      padding-left: $pd
+      padding-right: $pd
+
+    &__content
+      padding-left: $pd
+      padding-right: $pd
+
+    &-fixed
+      .nav-up &
+        transform: translateY(-130px)
+
+      .nav-down &
+        transform: translateY(-40px)
+
+  .gallery
+    max-height: $max-wp-height
+
+    &::before
+      left: $pd
+
+    &__navigation
+      right: -$pd
+
+    &__slide
+      &__content
+        margin-top: -162px
+
+      &__person
+        width: 58%
+        max-height: $max-wp-height
+        left: 0
+
+        &::before
+          left: 10px
+
+        &::after,
+        &__back
+          left: -65px
+          top: 44%
+          right: -$pd
+          bottom: 17%
+          height: auto
+
+        &__img
+          max-height: $max-wp-height
+          margin-top: -16px
+
+          .gallery__slide01 &
+            margin-left: -168px
+
+          .gallery__slide02 &
+            margin-left: -74px
+
+          .gallery__slide03 &
+            margin-left: -136px
+
+  .about-main
+    margin-top: -184px
+
+    &__dots-wrapper
+      width: 42%
+      height: 464px
+      text-align: center
+
+    &__dots-block
+      width: 60%
+      height: 464px
+      display: inline-block
+      padding: 0 $pd/2 0 $pd
+      position: relative
+    
+    &__dots
+      width: 100%
+      position: inherit
+
+    &__text
+      width: 58%
+      padding-left: 10px
+      padding-top: 52px
+
+
+  .programs
+    padding: 102px 0 343px
+
+    &__item
+      margin-top: 26px
+
+      &-2
+        margin-top: 126px
+
+      &__img
+        margin-bottom: 26px
+        -webkit-clip-path: inset(15px)
+        clip-path: inset(15px)
+
+      &__description
+        padding-left: 15px
+        padding-right: 15px
+
+      &__title
+        font-size: 30px
+        line-height: 42px
+        margin-left: 15px
+
+      &__description
+        padding-top: 12px
+
+  .promo-main
+    padding: 0 $pd
+
+    .head02
+      margin-top: 40px
+      padding-bottom: 25px
+
+    &__line
+      top: -251px
+
+    &__text
+      width: 83.33%
+      padding-left: 70px
+      padding-bottom: 341px
+      margin: -286px 0 0 0
+      padding-top: 80px
+
+
+  .footer
+    &-top
+      &__contacts-pos
+        left: $pd
+
+      &__socials-pos
+        right: $pd
+
+    &-bottom
+      &__rights
+        padding-left: 0
+
+      &__documents
+        &__rules
+          padding-left: 23px
+
+
+@media screen and (min-width: 1900px)
+  $pd: 65px
+
+  .head01
+    font-size: 56px
+    line-height: 68px
+
+  .head02
+    font-size: 36px
+    line-height: 48px
+
+  .content__wrapper
+    padding: 0 $pd
+
+  .navigation
+    &__content
+      padding-left: $pd
+      padding-right: $pd
+
+    &-fixed
+      padding-left: 30px
+      padding-right: 30px
+      
+      .nav-up &
+        transform: translateY(-130px)
+
+      .nav-down &
+        transform: translateY(-40px)
+
+  .gallery
+    &::before
+      left: $pd
+      bottom: 50px
+
+    &__slide
+      &__content
+        margin-top: -174px
+
+      &__person
+        &::before
+          left: 15px
+
+        &::after,
+        &__back
+          top: 46.3%
+          bottom: 15.8%
+          left: -73px
+
+
+  .about-main
+    height: 542px
+    margin-top: -274px
+
+    &__dots-wrapper
+      height: 542px
+
+    &__dots-block
+      height: 542px
+      padding: 0 33px 0 47px
+    
+    &__dots
+      height: 542px
+      line-height: 542px
+
+    &__logo
+      width: 306px
+      height: 306px
+
+      &__circle02
+        left: 28px
+        top: 28px
+
+      &__circle03
+        left: 55px
+        top: 55px
+
+      &__circle04
+        left: 83px
+        top: 83px
+
+    &__text
+      padding-left: 15px
+      padding-top: 89px
+
+  .programs
+    padding: 1px 0 340px
+
+    &__item
+      &__title
+        font-size: 36px
+        line-height: 48px
+
+  .promo-main
+    padding: 0 $pd
+
+    &__line
+      &::before
+        right: 55px
+
+    &__text
+      margin-top: -302px
+      padding-left: 100px
+
+
+  .footer
+    &-top
+      &__contacts-pos
+        left: $pd
+
+      &__socials-pos
+        right: $pd
+
+    &-bottom
+    .content__wrapper
+      padding: 0 $pd
+
+      &__rights
+        padding-left: 0
+
+      &__documents
+        &__rules
+          padding-left: 23px
+
+
